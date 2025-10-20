@@ -4,26 +4,276 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services - Agency Codex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/analytics.js" defer></script>
+    <script src="../js/lazy-load.js" defer></script>
+    <script src="../js/animations.js" defer></script>
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
+  <body class="font-inter">
+    <header class="fixed top-0 left-0 w-full z-50">
+      <!-- Top Contact Bar -->
+      <div class="bg-white shadow-md text-accent-500">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center text-sm">
+          <div class="flex items-center gap-6">
+            <span>Corporate Services</span>
+            <span>|</span>
+            <span>Mon - Fri, 10:00am - 08:00pm</span>
+          </div>
+          <div class="flex items-center gap-6">
+            <span>+88 01715 625 999</span>
+            <span>|</span>
+            <span>codexcolorinfo@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Navigation -->
+      <nav class="bg-fulvous-500 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+          <div class="text-xl font-bold text-white">CODEXCOLOR</div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-6">
+            <ul class="flex space-x-6">
+              <li>
+                <a
+                  href="/"
+                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/news"
+                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/templates"
+                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  >Templates</a
+                >
+              </li>
+            </ul>
+            <a href="/contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200">Contact us</a>
+          </div>
+
+        <!-- Hamburger Menu -->
+        <button class="md:hidden p-2 cursor-pointer text-white" id="hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div
+          class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+          id="mobile-menu"
+        >
+          <div class="py-2">
+            <a
+              href="/"
+              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+              >Home</a
+            >
+            <a
+              href="/about"
+              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+              >About Us</a
+            >
+            <a
+              href="/services"
+              class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
+              >Services</a
+            >
+            <a
+              href="/news"
+              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+              >News</a
+            >
+            <a
+              href="/templates"
+              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+              >Templates</a
+            >
+            <a
+              href="/contact"
+              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        </div>
       </nav>
     </header>
-    <main>
-      <h1>Our Services</h1>
-      <!-- Content will be added based on the mockup -->
+
+    <main class="pt-16">
+      <div class="container mx-auto px-4 py-12 md:py-20">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">Our Services</h1>
+        <!-- Content will be added based on the mockup -->
+      </div>
     </main>
-    <footer>
-      <p>&copy; 2025 Agency Codex. All rights reserved.</p>
+
+    <footer class="bg-bistre-200 text-white py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold">CodexColor</h3>
+            <p class="text-gray-300">
+              Lorem ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-fulvous-500 transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-fulvous-500 transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-fulvous-500 transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Services</h4>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="/services#web"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services#mobile"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Mobile Apps</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services#design"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >UI/UX Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services#marketing"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Digital Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Company</h4>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="/about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/portfolio"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Our Work</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/news"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >News & Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/careers"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Contact</h4>
+            <ul class="space-y-4 text-gray-400">
+              <li>Ka-8, Road-12, Baridhara Society</li>
+              <li>Dhaka, Bangladesh</li>
+              <li>+88 01715 625 999</li>
+              <li>
+                <a
+                  href="mailto:codexcolorinfo@gmail.com"
+                  class="hover:text-white transition-colors"
+                  >codexcolorinfo@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300">
+          <p>&copy; 2025 CodexColor. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
