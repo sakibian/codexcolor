@@ -1,13 +1,13 @@
 {
-  "name": "agency-codex",
+  "name": "codexcolor",
   "version": "1.0.0",
-  "description": "Agency Codex Website",
+  "description": "Codexcolor Digital Agency Website",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css && npm run build:js",
     "build:css": "tailwindcss -i css/tailwind.css -o css/style.css",
-    "build:js": "cp js/*.js build/",
+    "build:js": "mkdir -p build && cp js/*.js build/",
     "watch": "npm run build:css -- --watch"
   },
   "keywords": [
