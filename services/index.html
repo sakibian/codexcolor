@@ -3,22 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services - Agency Codex</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/animations.css" />
-    <script src="../js/navigation.js" defer></script>
-    <script src="../js/analytics.js" defer></script>
-    <script src="../js/lazy-load.js" defer></script>
-    <script src="../js/animations.js" defer></script>
+    <title>
+      Services - CodexColor | Mobile Optimization & Analytics for Small
+      Businesses
+    </title>
+    <meta
+      name="description"
+      content="Professional services for mobile website optimization, GA4 analytics setup, conversion tracking troubleshooting, and performance optimization. Serving Bangladesh & beyond."
+    />
+    <meta
+      name="keywords"
+      content="mobile optimization services, GA4 analytics setup, conversion tracking fixing, website performance optimization, Bangladesh"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="CodexColor" />
+    <meta name="geography" content="Dhaka, Bangladesh" />
+    <meta
+      property="og:title"
+      content="Services - CodexColor | Mobile Optimization & Analytics Experts"
+    />
+    <meta
+      property="og:description"
+      content="Professional services for mobile optimization, GA4 analytics, conversion tracking, and performance. Helping small businesses grow."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://codexcolor.com/services/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "CodexColor Services",
+        "description": "Mobile optimization, GA4 analytics, conversion tracking, and performance services for small businesses",
+        "provider": {
+          "@type": "Organization",
+          "name": "CodexColor",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ka-8, Road-12, Baridhara Society",
+            "addressLocality": "Dhaka",
+            "addressCountry": "Bangladesh"
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <script src="/build/navigation.js" defer></script>
+    <script src="/build/analytics.js" defer></script>
+    <script src="/build/lazy-load.js" defer></script>
+    <script src="/build/animations.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".service-link").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            const serviceName = e.target
+              .closest(".group")
+              .querySelector("h3").textContent;
+            window.gtag("event", "service_click", {
+              event_category: "Services",
+              event_label: serviceName,
+            });
+          });
+        });
+      });
+    </script>
   </head>
   <body class="font-inter">
     <header class="fixed top-0 left-0 w-full z-50">
-      <!-- Top Contact Bar -->
-      <div class="bg-white shadow-md text-accent-500">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center text-sm">
+      <!-- Top Contact Bar (hidden on small screens, visible on md and up) -->
+      <div class="hidden md:block bg-white shadow-md text-fulvous-500">
+        <div
+          class="container mx-auto px-4 py-2 flex justify-between items-center text-sm"
+        >
           <div class="flex items-center gap-6">
             <span>Corporate Services</span>
             <span>|</span>
@@ -34,7 +96,9 @@
 
       <!-- Main Navigation -->
       <nav class="bg-fulvous-500 shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div
+          class="container mx-auto px-4 py-3 flex justify-between items-center"
+        >
           <div class="text-xl font-bold text-white">CODEXCOLOR</div>
 
           <!-- Desktop Navigation -->
@@ -43,106 +107,699 @@
               <li>
                 <a
                   href="/"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="/about"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
                   href="/services"
-                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200"
+                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200 nav-link-underline"
                   >Services</a
                 >
               </li>
               <li>
                 <a
                   href="/news"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >News</a
                 >
               </li>
               <li>
                 <a
                   href="/templates"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >Templates</a
                 >
               </li>
             </ul>
-            <a href="/contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200">Contact us</a>
-          </div>
-
-        <!-- Hamburger Menu -->
-        <button class="md:hidden p-2 cursor-pointer text-white" id="hamburger">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-
-        <!-- Mobile Menu -->
-        <div
-          class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
-          id="mobile-menu"
-        >
-          <div class="py-2">
-            <a
-              href="/"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Home</a
-            >
-            <a
-              href="/about"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >About Us</a
-            >
-            <a
-              href="/services"
-              class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
-              >Services</a
-            >
-            <a
-              href="/news"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >News</a
-            >
-            <a
-              href="/templates"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Templates</a
-            >
             <a
               href="/contact"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Contact Us</a
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200"
+              >Contact us</a
             >
           </div>
-        </div>
+
+          <!-- Hamburger Menu -->
+          <button
+            class="md:hidden p-2 cursor-pointer text-white"
+            id="hamburger"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+            id="mobile-menu"
+          >
+            <div class="py-2">
+              <a
+                href="/"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Home</a
+              >
+              <a
+                href="/about"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >About Us</a
+              >
+              <a
+                href="/services"
+                class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
+                >Services</a
+              >
+              <a
+                href="/news"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >News</a
+              >
+              <a
+                href="/templates"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Templates</a
+              >
+              <a
+                href="/contact"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Contact Us</a
+              >
+            </div>
+          </div>
         </div>
       </nav>
     </header>
 
     <main class="pt-16">
       <div class="container mx-auto px-4 py-12 md:py-20">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">Our Services</h1>
-        <!-- Content will be added based on the mockup -->
+        <h1
+          class="text-4xl md:text-6xl font-bold mb-16 leading-tight text-gray-900"
+        >
+          Our Services
+        </h1>
+
+        <!-- Service Overview Cards -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20"
+        >
+          <!-- Mobile Optimization -->
+          <a
+            href="#mobile"
+            class="group relative bg-gradient-to-br from-fulvous-50 to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:rotate-1 p-8 border border-fulvous-100 cursor-pointer scroll-fade-in"
+            style="animation-delay: 0s"
+          >
+            <div
+              class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <img
+                src="/images/team-meeting-17.svg"
+                alt="Mobile Performance Optimization"
+                class="w-10 h-10"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">
+              Mobile Optimization for Small Businesses
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Speed up your mobile site, improve user experience, and boost
+              conversions with expert mobile-first optimization.
+            </p>
+            <div class="mb-6">
+              <span
+                class="inline-block bg-fulvous-100 text-fulvous-700 text-sm font-medium px-3 py-1 rounded-full"
+                >Starting at $499</span
+              >
+            </div>
+            <span
+              class="text-fulvous-500 font-semibold flex items-center gap-2 group-hover:translate-x-1 transition-transform"
+            >
+              Learn More →
+            </span>
+          </a>
+
+          <!-- Analytics Setup -->
+          <a
+            href="#analytics"
+            class="group relative bg-gradient-to-br from-fulvous-50 to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:rotate-1 p-8 border border-fulvous-100 cursor-pointer scroll-fade-in"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <img
+                src="/images/problem-solving-5-94.svg"
+                alt="GA4 Analytics"
+                class="w-10 h-10"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">
+              GA4 Setup & Analytics Implementation
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Professional Google Analytics 4 setup with custom dashboards,
+              goals, and advanced tracking for data-driven decisions.
+            </p>
+            <div class="mb-6">
+              <span
+                class="inline-block bg-fulvous-100 text-fulvous-700 text-sm font-medium px-3 py-1 rounded-full"
+                >Starting at $399</span
+              >
+            </div>
+            <span
+              class="text-fulvous-500 font-semibold flex items-center gap-2 group-hover:translate-x-1 transition-transform"
+            >
+              Learn More →
+            </span>
+          </a>
+
+          <!-- Conversion Tracking -->
+          <a
+            href="#conversion"
+            class="group relative bg-gradient-to-br from-fulvous-50 to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:rotate-1 p-8 border border-fulvous-100 cursor-pointer scroll-fade-in"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <img
+                src="/images/scrum-board-80.svg"
+                alt="Conversion Tracking"
+                class="w-10 h-10"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">
+              Conversion Tracking Troubleshooting
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Debug and optimize conversion tracking issues to ensure accurate
+              data and maximize ROI from your marketing efforts.
+            </p>
+            <div class="mb-6">
+              <span
+                class="inline-block bg-fulvous-100 text-fulvous-700 text-sm font-medium px-3 py-1 rounded-full"
+                >Starting at $299</span
+              >
+            </div>
+            <span
+              class="text-fulvous-500 font-semibold flex items-center gap-2 group-hover:translate-x-1 transition-transform"
+            >
+              Learn More →
+            </span>
+          </a>
+
+          <!-- Performance Optimization -->
+          <a
+            href="#performance"
+            class="group relative bg-gradient-to-br from-fulvous-50 to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:rotate-1 p-8 border border-fulvous-100 cursor-pointer scroll-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <div
+              class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <img
+                src="/images/team-brainstorming-5-40.svg"
+                alt="Performance"
+                class="w-10 h-10"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">
+              Website Performance Optimization
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Technical optimization for faster loading, better Core Web Vitals,
+              and improved user experience across all devices.
+            </p>
+            <div class="mb-6">
+              <span
+                class="inline-block bg-fulvous-100 text-fulvous-700 text-sm font-medium px-3 py-1 rounded-full"
+                >Starting at $599</span
+              >
+            </div>
+            <span
+              class="text-fulvous-500 font-semibold flex items-center gap-2 group-hover:translate-x-1 transition-transform"
+            >
+              Learn More →
+            </span>
+          </a>
+        </div>
+
+        <!-- Detailed Service Sections -->
+        <div class="space-y-20 mt-12">
+          <!-- Mobile Optimization Section -->
+          <section id="mobile" class="scroll-fade-in pt-20">
+            <div class="max-w-4xl mx-auto">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                  Mobile Optimization for Small Businesses
+                </h2>
+                <p class="text-xl text-gray-600">
+                  Is your website losing customers because it loads too slowly
+                  on mobile devices?
+                </p>
+              </div>
+
+              <div
+                class="bg-white rounded-2xl shadow-lg p-8 mb-8 services-detail-card"
+              >
+                <h3 class="text-2xl font-bold mb-6 text-gray-900 slide-text">
+                  What We Do
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">
+                      Mobile Performance Audit
+                    </h4>
+                    <ul class="space-y-2 text-gray-600">
+                      <li>• Analyze loading times across devices</li>
+                      <li>• Test Core Web Vitals (LCP, FID, CLS)</li>
+                      <li>• Review mobile user experience</li>
+                      <li>• Report optimization opportunities</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">
+                      Conversion Optimization
+                    </h4>
+                    <ul class="space-y-2 text-gray-600">
+                      <li>• Mobile-first responsive design</li>
+                      <li>• Touch-friendly interface optimization</li>
+                      <li>• Call-to-action button optimization</li>
+                      <li>• Form completion rate improvement</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gradient-to-r from-fulvous-50 to-fulvous-100 rounded-2xl p-8"
+              >
+                <h3 class="text-xl font-bold mb-4 text-gray-900">
+                  Why Small Businesses Need Mobile Optimization
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="bg-white rounded-lg p-4">
+                    <div class="text-5xl font-bold text-fulvous-600 mb-2">
+                      92%
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      of users expect sites to load in 5 seconds or less
+                    </p>
+                  </div>
+                  <div class="bg-white rounded-lg p-4">
+                    <div class="text-5xl font-bold text-fulvous-600 mb-2">
+                      53%
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      of visits are abandoned if loading takes longer than 3
+                      seconds
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-8">
+                <a
+                  href="/contact?service=mobile"
+                  class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 transition-all duration-300"
+                >
+                  Get Your Mobile Audit
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Analytics Section -->
+          <section
+            id="analytics"
+            class="scroll-fade-in bg-gray-50 -mx-4 px-4 py-16 pt-8 mt-12"
+          >
+            <div class="max-w-4xl mx-auto">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                  GA4 Setup & Analytics Implementation
+                </h2>
+                <p class="text-xl text-gray-600">
+                  Turn your website data into actionable business insights
+                </p>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                  <h3 class="text-xl font-bold mb-6 text-gray-900">
+                    GA4 Migration & Setup
+                  </h3>
+                  <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span
+                        >Complete migration from Universal Analytics to
+                        GA4</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span>Property and data stream configuration</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span>Enhanced measurement setup</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span>Data retention and privacy settings</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                  <h3 class="text-xl font-bold mb-6 text-gray-900">
+                    Custom Dashboards & Reports
+                  </h3>
+                  <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span>Business-focused custom reports</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span>Key performance indicator dashboards</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span>Automated report scheduling</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span
+                        class="w-6 h-6 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center text-sm font-medium mr-3 mt-0.5"
+                        >✓</span
+                      >
+                      <span>Email alerts and notifications</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <a
+                  href="/contact?service=analytics"
+                  class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 transition-all duration-300"
+                >
+                  Setup GA4 Analytics
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Conversion Tracking Section -->
+          <section id="conversion" class="scroll-fade-in pt-8 mt-12">
+            <div class="max-w-4xl mx-auto">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                  Conversion Tracking Troubleshooting
+                </h2>
+                <p class="text-xl text-gray-600">
+                  Fix broken tracking pixels and missing conversions that are
+                  costing you money
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h3 class="text-xl font-bold mb-6 text-gray-900">
+                  Common Problems We Fix
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                  <div class="text-center p-4 bg-fulvous-50 rounded-lg">
+                    <div
+                      class="w-12 h-12 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center mx-auto mb-3"
+                    >
+                      <span class="font-bold">FB</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">
+                      Facebook Pixel Errors
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Broken event tracking, missing conversions, incorrect
+                      parameters
+                    </p>
+                  </div>
+                  <div class="text-center p-4 bg-fulvous-50 rounded-lg">
+                    <div
+                      class="w-12 h-12 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center mx-auto mb-3"
+                    >
+                      <span class="font-bold">GA</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">
+                      GA4 Goal Setup
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Misconfigured conversions, attribution issues, data
+                      discrepancies
+                    </p>
+                  </div>
+                  <div class="text-center p-4 bg-fulvous-50 rounded-lg">
+                    <div
+                      class="w-12 h-12 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center mx-auto mb-3"
+                    >
+                      <span class="font-bold">T</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">
+                      Multi-Platform Tracking
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      LinkedIn, Twitter, Google Ads, and other advertising
+                      platforms
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gradient-to-r from-fulvous-50 to-fulvous-100 rounded-2xl p-8"
+              >
+                <h3 class="text-xl font-bold mb-4 text-gray-900">
+                  Before & After Results
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="bg-white rounded-lg p-6">
+                    <h4 class="font-semibold text-fulvous-600 mb-2">Before</h4>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                      <li>• Facebook conversions not firing</li>
+                      <li>• Google Ads data mismatch</li>
+                      <li>• ROI calculations inaccurate</li>
+                      <li>• Campaign optimization crippled</li>
+                    </ul>
+                  </div>
+                  <div class="bg-white rounded-lg p-6">
+                    <h4 class="font-semibold text-fulvous-600 mb-2">After</h4>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                      <li>• 100% tracking accuracy</li>
+                      <li>• Precise attribution data</li>
+                      <li>• Reliable ROI measurements</li>
+                      <li>• Optimized campaign performance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-8">
+                <a
+                  href="/contact?service=conversion"
+                  class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 transition-all duration-300"
+                >
+                  Debug My Tracking
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Performance Optimization Section -->
+          <section
+            id="performance"
+            class="scroll-fade-in bg-gray-50 -mx-4 px-4 py-16"
+          >
+            <div class="max-w-4xl mx-auto">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                  Website Performance Optimization
+                </h2>
+                <p class="text-xl text-gray-600">
+                  Technical optimization that directly impacts your search
+                  rankings and conversion rates
+                </p>
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                  <div class="text-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center mx-auto mb-2"
+                    >
+                      <span class="font-bold">LCP</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900">
+                      Largest Contentful Paint
+                    </h4>
+                  </div>
+                  <p class="text-sm text-gray-600 text-center">
+                    Optimize for fast loading of main content
+                  </p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                  <div class="text-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center mx-auto mb-2"
+                    >
+                      <span class="font-bold">FID</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900">
+                      First Input Delay
+                    </h4>
+                  </div>
+                  <p class="text-sm text-gray-600 text-center">
+                    Improve interactivity and responsiveness
+                  </p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                  <div class="text-center mb-4">
+                    <div
+                      class="w-12 h-12 bg-fulvous-100 text-fulvous-600 rounded-full flex items-center justify-center mx-auto mb-2"
+                    >
+                      <span class="font-bold">CLS</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900">
+                      Cumulative Layout Shift
+                    </h4>
+                  </div>
+                  <p class="text-sm text-gray-600 text-center">
+                    Prevent jarring layout movements
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h3 class="text-xl font-bold mb-6 text-gray-900">
+                  Our Performance Optimization Process
+                </h3>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-8 h-8 bg-fulvous-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-4"
+                    >
+                      1
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-2">
+                        Comprehensive Performance Audit
+                      </h4>
+                      <p class="text-gray-600">
+                        Detailed analysis using Google PageSpeed Insights,
+                        Lighthouse, and other tools
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-8 h-8 bg-fulvous-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-4"
+                    >
+                      2
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-2">
+                        Asset Optimization & CDN Setup
+                      </h4>
+                      <p class="text-gray-600">
+                        Compress images, minify code, implement caching, and
+                        configure content delivery
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-8 h-8 bg-fulvous-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-4"
+                    >
+                      3
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-2">
+                        Server & Hosting Optimization
+                      </h4>
+                      <p class="text-gray-600">
+                        Configure server settings, implement compression, and
+                        optimize database queries
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-8 h-8 bg-fulvous-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-4"
+                    >
+                      4
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-2">
+                        Monitoring & Maintenance
+                      </h4>
+                      <p class="text-gray-600">
+                        Set up continuous monitoring and regular performance
+                        optimization maintenance
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-8">
+                <a
+                  href="/contact?service=performance"
+                  class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 transition-all duration-300"
+                >
+                  Optimize Performance
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
 
@@ -152,8 +809,8 @@
           <div class="space-y-6">
             <h3 class="text-2xl font-bold">CodexColor</h3>
             <p class="text-gray-300">
-              Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Professional mobile optimization, GA4 analytics setup, conversion
+              tracking, and performance enhancement services across Bangladesh.
             </p>
             <div class="flex space-x-3">
               <a
@@ -193,30 +850,30 @@
             <ul class="space-y-4">
               <li>
                 <a
-                  href="/services#web"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Web Development</a
-                >
-              </li>
-              <li>
-                <a
                   href="/services#mobile"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Mobile Apps</a
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >Mobile Optimization</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#design"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >UI/UX Design</a
+                  href="/services#analytics"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >GA4 Analytics</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#marketing"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Digital Marketing</a
+                  href="/services#conversion"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >Conversion Tracking</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services#performance"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >Performance Optimization</a
                 >
               </li>
             </ul>
@@ -227,28 +884,28 @@
               <li>
                 <a
                   href="/about"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
                   href="/portfolio"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
                   >Our Work</a
                 >
               </li>
               <li>
                 <a
                   href="/news"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
                   >News & Blog</a
                 >
               </li>
               <li>
                 <a
                   href="/careers"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
                   >Careers</a
                 >
               </li>
@@ -270,7 +927,9 @@
             </ul>
           </div>
         </div>
-        <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300">
+        <div
+          class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300"
+        >
           <p>&copy; 2025 CodexColor. All rights reserved.</p>
         </div>
       </div>

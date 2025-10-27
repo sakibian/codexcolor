@@ -8,7 +8,8 @@
     "build": "npm run build:css && npm run build:js",
     "build:css": "tailwindcss -i css/tailwind.css -o css/style.css",
     "build:js": "mkdir -p build && cp js/*.js build/",
-    "watch": "npm run build:css -- --watch"
+    "watch": "npm run build:css -- --watch",
+    "lint:css": "stylelint '**/*.css' --fix --allow-empty-input"
   },
   "keywords": [
     "agency",

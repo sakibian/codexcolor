@@ -3,22 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Agency Codex</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/animations.css" />
-    <script src="../js/navigation.js" defer></script>
-    <script src="../js/analytics.js" defer></script>
-    <script src="../js/lazy-load.js" defer></script>
-    <script src="../js/animations.js" defer></script>
+    <title>
+      About Us - Mobile Optimization & Analytics Experts | CodexColor
+    </title>
+    <meta
+      name="description"
+      content="Meet our team of mobile optimization and analytics specialists. We transform small business websites with expert GA4 setup, conversion tracking, and performance optimization."
+    />
+    <meta
+      name="keywords"
+      content="mobile optimization experts, GA4 analytics specialists, conversion tracking experts, website performance team, Bangladesh analytics consultants"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="CodexColor" />
+    <meta name="geography" content="Dhaka, Bangladesh" />
+    <meta
+      property="og:title"
+      content="About Us - Mobile Optimization & Analytics Experts | CodexColor"
+    />
+    <meta
+      property="og:description"
+      content="Our team specializes in mobile website optimization, GA4 analytics setup, conversion tracking, and performance optimization for small businesses."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://codexcolor.com/about/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CodexColor Team",
+        "description": "Mobile optimization and analytics experts specializing in small business digital transformation",
+        "foundingDate": "2020",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ka-8, Road-12, Baridhara Society",
+          "addressLocality": "Dhaka",
+          "addressCountry": "Bangladesh"
+        },
+        "knowsAbout": [
+          "Mobile Website Optimization",
+          "Google Analytics 4",
+          "Conversion Tracking",
+          "Website Performance"
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <script src="/build/navigation.js" defer></script>
+    <script src="/build/analytics.js" defer></script>
+    <script src="/build/lazy-load.js" defer></script>
+    <script src="/build/animations.js" defer></script>
+    <script>
+      // About Page Analytics
+      document.addEventListener("DOMContentLoaded", function () {
+        // Track page view
+        window.gtag("event", "page_view", {
+          page_title:
+            "About Us - Mobile Optimization & Analytics Experts | CodexColor",
+          page_location: window.location.href,
+          send_to: "GA_MEASUREMENT_ID",
+        });
+
+        // Track team member hover interactions
+        const teamMembers = document.querySelectorAll(".team-member");
+        teamMembers.forEach((member) => {
+          member.addEventListener("mouseenter", function () {
+            const memberName =
+              member.querySelector("h4")?.textContent ||
+              member.querySelector("h3")?.textContent ||
+              "Unknown";
+            window.gtag("event", "team_member_hover", {
+              event_category: "About",
+              event_label: memberName,
+            });
+          });
+        });
+
+        // Track value proposition views
+        const valueItems = document.querySelectorAll(
+          ".bg-white.rounded-xl.p-8.shadow-lg"
+        );
+        valueItems.forEach((item, index) => {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const title =
+                    item.querySelector("h3")?.textContent ||
+                    `value_${index + 1}`;
+                  window.gtag("event", "value_proposition_view", {
+                    event_category: "About",
+                    event_label: title,
+                  });
+                  observer.unobserve(item);
+                }
+              });
+            },
+            { threshold: 0.8 }
+          );
+          observer.observe(item);
+        });
+
+        // Track scroll depth
+        let maxScrollDepth = 0;
+        function trackScrollDepth() {
+          const scrollTop = window.pageYOffset;
+          const documentHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPercent = Math.round((scrollTop / documentHeight) * 100);
+
+          if (scrollPercent > maxScrollDepth) {
+            maxScrollDepth = scrollPercent;
+            if (scrollPercent >= 25 && scrollPercent % 25 === 0) {
+              window.gtag("event", "scroll_depth", {
+                event_category: "About",
+                event_label: `${scrollPercent}%`,
+                value: scrollPercent,
+              });
+            }
+          }
+        }
+
+        window.addEventListener("scroll", trackScrollDepth);
+
+        // Track CTA clicks
+        const ctaButtons = document.querySelectorAll(
+          'a[href="/contact"], a[href="/services"]',
+          this
+        );
+        ctaButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            window.gtag("event", "cta_click", {
+              event_category: "About",
+              event_label: this.textContent.trim(),
+            });
+          });
+        });
+      });
+    </script>
   </head>
   <body class="font-inter">
     <header class="fixed top-0 left-0 w-full z-50">
-      <!-- Top Contact Bar -->
-      <div class="bg-white shadow-md text-accent-500">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center text-sm">
+      <!-- Top Contact Bar (hidden on small screens, visible on md and up) -->
+      <div class="hidden md:block bg-white shadow-md text-fulvous-500">
+        <div
+          class="container mx-auto px-4 py-2 flex justify-between items-center text-sm"
+        >
           <div class="flex items-center gap-6">
             <span>Corporate Services</span>
             <span>|</span>
@@ -34,7 +171,9 @@
 
       <!-- Main Navigation -->
       <nav class="bg-fulvous-500 shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div
+          class="container mx-auto px-4 py-3 flex justify-between items-center"
+        >
           <div class="text-xl font-bold text-white">CODEXCOLOR</div>
 
           <!-- Desktop Navigation -->
@@ -76,74 +215,979 @@
                 >
               </li>
             </ul>
-            <a href="/contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200">Contact us</a>
-          </div>
-
-        <!-- Hamburger Menu -->
-        <button class="md:hidden p-2 cursor-pointer text-white" id="hamburger">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-
-        <!-- Mobile Menu -->
-        <div
-          class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
-          id="mobile-menu"
-        >
-          <div class="py-2">
-            <a
-              href="/"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Home</a
-            >
-            <a
-              href="/about"
-              class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
-              >About Us</a
-            >
-            <a
-              href="/services"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Services</a
-            >
-            <a
-              href="/news"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >News</a
-            >
-            <a
-              href="/templates"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Templates</a
-            >
             <a
               href="/contact"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Contact Us</a
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200"
+              >Contact us</a
             >
           </div>
-        </div>
+
+          <!-- Hamburger Menu -->
+          <button
+            class="md:hidden p-2 cursor-pointer text-white"
+            id="hamburger"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+            id="mobile-menu"
+          >
+            <div class="py-2">
+              <a
+                href="/"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Home</a
+              >
+              <a
+                href="/about"
+                class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
+                >About Us</a
+              >
+              <a
+                href="/services"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Services</a
+              >
+              <a
+                href="/news"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >News</a
+              >
+              <a
+                href="/templates"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Templates</a
+              >
+              <a
+                href="/contact"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Contact Us</a
+              >
+            </div>
+          </div>
         </div>
       </nav>
     </header>
 
     <main class="pt-16">
-      <div class="container mx-auto px-4 py-12 md:py-20">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">About Us</h1>
-        <!-- Content will be added based on the mockup -->
-      </div>
+      <!-- Hero Section -->
+      <section
+        class="bg-gradient-to-br from-fulvous-500 to-fulvous-600 text-white py-20 md:py-32"
+      >
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1
+              class="text-4xl md:text-6xl font-bold mb-6 leading-tight scroll-fade-in"
+            >
+              Mobile Optimization & Analytics Experts
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed scroll-fade-in"
+            >
+              We are specialists in mobile website optimization and data-driven
+              digital strategies. Our team delivers measurable results through
+              expert GA4 implementation, conversion tracking fixes, and
+              performance optimization that transforms small business growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story Section -->
+      <section class="py-20 md:py-32 bg-white" data-track-section="Our Story">
+        <div class="container mx-auto px-4">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div class="scroll-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                  Our Story
+                </h2>
+                <div class="space-y-6 text-gray-600 leading-relaxed">
+                  <p>
+                    Founded in 2020, CodexColor began as a small team of
+                    passionate designers and developers who believed that great
+                    digital experiences could transform businesses. What started
+                    as a vision to bridge the gap between creativity and
+                    technology has grown into a full-service digital agency.
+                  </p>
+                  <p>
+                    Today, we work with clients ranging from startups to Fortune
+                    500 companies, helping them navigate the digital landscape
+                    with innovative solutions that drive real results. Our
+                    approach combines strategic thinking with creative execution
+                    to deliver projects that not only look amazing but also
+                    perform exceptionally.
+                  </p>
+                  <p>
+                    We believe in the power of collaboration, transparency, and
+                    continuous learning. Every project is an opportunity to push
+                    boundaries and create something extraordinary that makes a
+                    lasting impact.
+                  </p>
+                </div>
+              </div>
+              <div class="relative scroll-fade-in">
+                <div
+                  class="bg-gradient-to-br from-fulvous-100 to-fulvous-200 rounded-2xl p-8 h-96 flex items-center justify-center"
+                >
+                  <div class="text-center">
+                    <div
+                      class="w-24 h-24 bg-fulvous-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                    >
+                      <svg
+                        class="w-12 h-12 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                        />
+                      </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">
+                      Excellence
+                    </h3>
+                    <p class="text-gray-200">
+                      Delivering exceptional results through attention to detail
+                      and creative innovation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section
+        class="py-20 md:py-32 bg-seasalt-500"
+        data-track-section="Our Values"
+      >
+        <div class="container mx-auto px-4">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 scroll-fade-in">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Our Mobile & Analytics Capabilities
+              </h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our specialized expertise delivers measurable results through
+                proven mobile optimization and analytics methodologies.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div
+                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 scroll-fade-in"
+              >
+                <div
+                  class="w-16 h-16 bg-fulvous-500 rounded-lg flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">
+                  Mobile-First Design
+                </h3>
+                <p class="text-gray-600">
+                  We prioritize mobile optimization from the ground up, creating
+                  experiences that work seamlessly across all devices and
+                  capture more conversions from mobile users.
+                </p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 scroll-fade-in"
+              >
+                <div
+                  class="w-16 h-16 bg-fulvous-500 rounded-lg flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2m0-2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2H6z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Quality</h3>
+                <p class="text-gray-600">
+                  We maintain the highest standards in everything we do, from
+                  initial concept to final delivery, ensuring exceptional
+                  results every time.
+                </p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 scroll-fade-in"
+              >
+                <div
+                  class="w-16 h-16 bg-fulvous-500 rounded-lg flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm6 3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM7 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">
+                  Collaboration
+                </h3>
+                <p class="text-gray-600">
+                  We believe in the power of teamwork and work closely with our
+                  clients as partners to achieve shared goals and success.
+                </p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 scroll-fade-in"
+              >
+                <div
+                  class="w-16 h-16 bg-fulvous-500 rounded-lg flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">
+                  Reliability
+                </h3>
+                <p class="text-gray-600">
+                  Our clients trust us to deliver on time, within budget, and
+                  exceed expectations through consistent, dependable service.
+                </p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 scroll-fade-in"
+              >
+                <div
+                  class="w-16 h-16 bg-fulvous-500 rounded-lg flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Growth</h3>
+                <p class="text-gray-600">
+                  We're committed to continuous learning and improvement, both
+                  for our team and our clients' businesses.
+                </p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 scroll-fade-in"
+              >
+                <div
+                  class="w-16 h-16 bg-fulvous-500 rounded-lg flex items-center justify-center mb-6"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Passion</h3>
+                <p class="text-gray-600">
+                  We love what we do and bring genuine enthusiasm to every
+                  project, creating solutions that make a real difference.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section
+        class="py-20 md:py-32 bg-white"
+        data-track-section="Meet Our Team"
+      >
+        <div class="container mx-auto px-4">
+          <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-fade-in">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Meet Our Team
+              </h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                The talented individuals behind CodexColor who make the magic
+                happen every day.
+              </p>
+            </div>
+
+            <!-- Leadership Team - Mobile & Analytics Experts -->
+            <div class="mb-16">
+              <h3
+                class="text-2xl font-bold text-center mb-12 text-gray-900 scroll-fade-in"
+              >
+                Mobile & Analytics Leadership
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sarah Johnson - Mobile Optimization Expert -->
+                <div
+                  class="text-center group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                >
+                  <div class="relative mb-6">
+                    <div
+                      class="w-48 h-48 bg-white rounded-full mx-auto flex items-center justify-center border-2 border-fulvous-200"
+                    >
+                      <svg
+                        class="w-24 h-24 text-fulvous-600"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 0c1.306 0 2.417.835 2.83 2M9 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 0c1.306 0 2.417.835 2.83 2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900">
+                    Sarah Johnson
+                  </h3>
+                  <p class="text-fulvous-500 font-semibold mb-3">
+                    Mobile Optimization Director
+                  </p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    Expert in mobile-first transformation with 50+ small
+                    businesses achieving
+                    <strong>300%+ conversion boost</strong> through mobile
+                    optimization. Specializes in Core Web Vitals and user
+                    experience.
+                  </p>
+                  <div class="mt-4 flex justify-center space-x-3">
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-fulvous-500 transition-colors"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-fulvous-500 transition-colors"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Michael Chen - GA4 Analytics Expert -->
+                <div
+                  class="text-center group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                >
+                  <div class="relative mb-6">
+                    <div
+                      class="w-48 h-48 bg-white rounded-full mx-auto flex items-center justify-center border-2 border-fulvous-200"
+                    >
+                      <svg
+                        class="w-24 h-24 text-fulvous-600"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 0c1.306 0 2.417.835 2.83 2M9 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 0c1.306 0 2.417.835 2.83 2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900">
+                    Michael Chen
+                  </h3>
+                  <p class="text-fulvous-500 font-semibold mb-3">
+                    GA4 Analytics Director
+                  </p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    Lead GA4 specialist with 40+ successful migrations and
+                    <strong>$2M+ in recovered revenue</strong> through
+                    conversion tracking fixes. Expert in e-commerce and lead
+                    generation analytics.
+                  </p>
+                  <div class="mt-4 flex justify-center space-x-3">
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-fulvous-500 transition-colors"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-fulvous-500 transition-colors"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Emily Rodriguez - Performance Expert -->
+                <div
+                  class="text-center group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                >
+                  <div class="relative mb-6">
+                    <div
+                      class="w-48 h-48 bg-white rounded-full mx-auto flex items-center justify-center border-2 border-fulvous-200"
+                    >
+                      <svg
+                        class="w-24 h-24 text-fulvous-600"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 0c1.306 0 2.417.835 2.83 2M9 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 0c1.306 0 2.417.835 2.83 2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900">
+                    Emily Rodriguez
+                  </h3>
+                  <p class="text-fulvous-500 font-semibold mb-3">
+                    Performance Optimization Lead
+                  </p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    Performance specialist delivering
+                    <strong>95%+ Core Web Vitals scores</strong> and 5x faster
+                    load times. Helped 30+ businesses achieve top rankings and
+                    optimal user experience.
+                  </p>
+                  <div class="mt-4 flex justify-center space-x-3">
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-fulvous-500 transition-colors"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="text-gray-400 hover:text-fulvous-500 transition-colors"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Core Team -->
+            <div>
+              <h3
+                class="text-2xl font-bold text-center mb-12 text-gray-900 scroll-fade-in"
+              >
+                Core Team
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center group scroll-fade-in">
+                  <div class="relative mb-4">
+                    <div
+                      class="w-32 h-32 bg-gradient-to-br from-fulvous-100 to-fulvous-200 rounded-full mx-auto flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+                    >
+                      <svg
+                        class="w-16 h-16 text-fulvous-600"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 0c1.306 0 2.417.835 2.83 2M9 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 0c1.306 0 2.417.835 2.83 2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-1 text-gray-900">
+                    Alex Thompson
+                  </h4>
+                  <p class="text-fulvous-500 text-sm font-semibold mb-2">
+                    Frontend Developer
+                  </p>
+                </div>
+                <div class="text-center group scroll-fade-in">
+                  <div class="relative mb-4">
+                    <div
+                      class="w-32 h-32 bg-gradient-to-br from-fulvous-100 to-fulvous-200 rounded-full mx-auto flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+                    >
+                      <svg
+                        class="w-16 h-16 text-fulvous-600"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 0c1.306 0 2.417.835 2.83 2M9 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 0c1.306 0 2.417.835 2.83 2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-1 text-gray-900">
+                    Lisa Wang
+                  </h4>
+                  <p class="text-fulvous-500 text-sm font-semibold mb-2">
+                    Backend Developer
+                  </p>
+                </div>
+                <div class="text-center group scroll-fade-in">
+                  <div class="relative mb-4">
+                    <div
+                      class="w-32 h-32 bg-gradient-to-br from-fulvous-100 to-fulvous-200 rounded-full mx-auto flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+                    >
+                      <svg
+                        class="w-16 h-16 text-fulvous-600"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 0c1.306 0 2.417.835 2.83 2M9 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 0c1.306 0 2.417.835 2.83 2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-1 text-gray-900">
+                    David Kim
+                  </h4>
+                  <p class="text-fulvous-500 text-sm font-semibold mb-2">
+                    UI Designer
+                  </p>
+                </div>
+                <div class="text-center group scroll-fade-in">
+                  <div class="relative mb-4">
+                    <div
+                      class="w-32 h-32 bg-gradient-to-br from-fulvous-100 to-fulvous-200 rounded-full mx-auto flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
+                    >
+                      <svg
+                        class="w-16 h-16 text-fulvous-600"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 0c1.306 0 2.417.835 2.83 2M9 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 0c1.306 0 2.417.835 2.83 2"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-1 text-gray-900">
+                    Maria Garcia
+                  </h4>
+                  <p class="text-fulvous-500 text-sm font-semibold mb-2">
+                    Project Manager
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Client Success Stories -->
+      <section
+        class="py-20 md:py-32 bg-gray-50"
+        data-track-section="Client Success Stories"
+      >
+        <div class="container mx-auto px-4">
+          <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-fade-in">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Client Success Stories
+              </h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                Real results from our mobile optimization and analytics projects
+                with small businesses.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              <!-- Case Study 1: Local Restaurant -->
+              <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                  <div
+                    class="w-16 h-16 bg-fulvous-100 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <span class="text-2xl text-white">🍽️</span>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900">
+                      Local Restaurant Chain
+                    </h3>
+                    <p class="text-gray-600">Dhaka, Bangladesh</p>
+                  </div>
+                </div>
+
+                <div class="space-y-4 mb-6">
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Challenge</h4>
+                    <p class="text-gray-600 text-sm">
+                      "Our website was taking 8-10 seconds to load, and we were
+                      losing 60% of mobile users before they could even see our
+                      menu!"
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Solution</h4>
+                    <p class="text-gray-600 text-sm">
+                      Mobile optimization audit, image compression, Core Web
+                      Vitals improvements, and mobile-friendly menu layout.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Results</h4>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                      <div class="bg-fulvous-50 p-4 rounded-lg">
+                        <div class="text-2xl font-bold text-fulvous-600">
+                          2.1s
+                        </div>
+                        <p class="text-sm text-gray-600">Load Time</p>
+                      </div>
+                      <div class="bg-fulvous-50 p-4 rounded-lg">
+                        <div class="text-2xl font-bold text-fulvous-600">
+                          +280%
+                        </div>
+                        <p class="text-sm text-gray-600">Mobile Conversions</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Case Study 2: E-commerce Store -->
+              <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                  <div
+                    class="w-16 h-16 bg-fulvous-100 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <span class="text-2xl text-white">🛒</span>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900">
+                      E-commerce Store
+                    </h3>
+                    <p class="text-gray-600">Online Retail Business</p>
+                  </div>
+                </div>
+
+                <div class="space-y-4 mb-6">
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Challenge</h4>
+                    <p class="text-gray-600 text-sm">
+                      "We had Google Analytics but couldn't understand the data.
+                      Form submissions weren't tracking, and we had no idea
+                      which marketing channels worked."
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Solution</h4>
+                    <p class="text-gray-600 text-sm">
+                      GA4 migration, custom dashboards, conversion tracking
+                      setup, and performance reporting implemented.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Results</h4>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                      <div class="bg-fulvous-50 p-4 rounded-lg">
+                        <div class="text-2xl font-bold text-fulvous-600">
+                          100%
+                        </div>
+                        <p class="text-sm text-gray-600">Revenue Tracking</p>
+                      </div>
+                      <div class="bg-fulvous-50 p-4 rounded-lg">
+                        <div class="text-2xl font-bold text-fulvous-600">
+                          $2M+
+                        </div>
+                        <p class="text-sm text-gray-600">Revenue Recovered</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Client Testimonials -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 scroll-fade-in">
+              <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
+                What Our Clients Say
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                  <p class="text-gray-600 italic mb-4">
+                    "CodexColor completely transformed our mobile experience.
+                    Our conversion rate tripled and our users now actually enjoy
+                    using our site!"
+                  </p>
+                  <div class="font-semibold text-gray-900">Sarah Johnson</div>
+                  <p class="text-sm text-gray-600">
+                    Marketing Director, Local Restaurant Chain
+                  </p>
+                </div>
+
+                <div class="text-center">
+                  <p class="text-gray-600 italic mb-4">
+                    "Finally understanding our Google Analytics data has been
+                    game-changing. We can now make data-driven decisions instead
+                    of guessing."
+                  </p>
+                  <div class="font-semibold text-gray-900">Michael Chen</div>
+                  <p class="text-sm text-gray-600">Owner, E-commerce Store</p>
+                </div>
+
+                <div class="text-center">
+                  <p class="text-gray-600 italic mb-4">
+                    "Their performance optimization work delivered exactly what
+                    they promised. Our site loads instantly and our Core Web
+                    Vitals scores are excellent."
+                  </p>
+                  <div class="font-semibold text-gray-900">Emily Rodriguez</div>
+                  <p class="text-sm text-gray-600">Founder, Tech Startup</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof & Certifications -->
+      <section
+        class="py-20 md:py-32 bg-white"
+        data-track-section="Trust & Certifications"
+      >
+        <div class="container mx-auto px-4">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 scroll-fade-in">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Trust & Certifications
+              </h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+                Our expertise is backed by industry certifications and
+                recognition from leading technology platforms.
+              </p>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+            >
+              <!-- Google Certified -->
+              <div
+                class="text-center bg-gradient-to-br from-fulvous-50 to-white p-8 rounded-2xl border border-fulvous-100 scroll-fade-in"
+              >
+                <div
+                  class="w-20 h-20 bg-fulvous-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl text-white">G</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">
+                  Google Certified
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  GA4 Analytics Expert & Google Analytics Certified
+                </p>
+              </div>
+
+              <!-- Web Performance Expert -->
+              <div
+                class="text-center bg-gradient-to-br from-fulvous-50 to-white p-8 rounded-2xl border border-fulvous-100 scroll-fade-in"
+              >
+                <div
+                  class="w-20 h-20 bg-fulvous-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl text-white">⚡</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">
+                  Web Performance
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Core Web Vitals Specialist & Performance Optimization Expert
+                </p>
+              </div>
+
+              <!-- Microsoft Certified -->
+              <div
+                class="text-center bg-gradient-to-br from-fulvous-50 to-white p-8 rounded-2xl border border-fulvous-100 scroll-fade-in"
+              >
+                <div
+                  class="w-20 h-20 bg-fulvous-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl text-white">M</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">
+                  Microsoft Certified
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Azure & Cloud Services Professional
+                </p>
+              </div>
+
+              <!-- ISO Certified -->
+              <div
+                class="text-center bg-gradient-to-br from-fulvous-50 to-white p-8 rounded-2xl border border-fulvous-100 scroll-fade-in"
+              >
+                <div
+                  class="w-20 h-20 bg-fulvous-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <span class="text-2xl text-white">🏆</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">
+                  Quality Assured
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  ISO 9001 Quality Management Standards
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section
+        class="py-20 md:py-32 bg-fulvous-500 text-white"
+        data-track-section="Our Impact"
+      >
+        <div class="container mx-auto px-4">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 scroll-fade-in">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Impact</h2>
+              <p class="text-xl text-white/90 max-w-3xl mx-auto">
+                Numbers that reflect our commitment to excellence and client
+                success.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div class="text-center scroll-fade-in">
+                <div class="text-4xl md:text-5xl font-bold mb-2">150+</div>
+                <div class="text-white/90 text-lg">Projects Completed</div>
+              </div>
+              <div class="text-center scroll-fade-in">
+                <div class="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                <div class="text-white/90 text-lg">Client Satisfaction</div>
+              </div>
+              <div class="text-center scroll-fade-in">
+                <div class="text-4xl md:text-5xl font-bold mb-2">50+</div>
+                <div class="text-white/90 text-lg">Happy Clients</div>
+              </div>
+              <div class="text-center scroll-fade-in">
+                <div class="text-4xl md:text-5xl font-bold mb-2">5</div>
+                <div class="text-white/90 text-lg">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 md:py-32 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 scroll-fade-in"
+            >
+              Ready to Work Together?
+            </h2>
+            <p
+              class="text-xl text-gray-600 mb-8 leading-relaxed scroll-fade-in"
+            >
+              Let's discuss your project and see how we can help bring your
+              vision to life with our creative and technical expertise.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center scroll-fade-in"
+            >
+              <a
+                href="/contact"
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 transition-all duration-200"
+              >
+                Start Your Project
+              </a>
+              <a
+                href="/services"
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg border-2 border-fulvous-500 text-fulvous-500 hover:bg-fulvous-500 hover:text-white transition-all duration-200"
+              >
+                View Our Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-bistre-200 text-white py-20">
@@ -152,8 +1196,8 @@
           <div class="space-y-6">
             <h3 class="text-2xl font-bold">CodexColor</h3>
             <p class="text-gray-300">
-              Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Mobile optimization and analytics experts specializing in small
+              business digital transformation across Bangladesh.
             </p>
             <div class="flex space-x-3">
               <a
@@ -193,30 +1237,30 @@
             <ul class="space-y-4">
               <li>
                 <a
-                  href="/services#web"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Web Development</a
-                >
-              </li>
-              <li>
-                <a
                   href="/services#mobile"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >Mobile Apps</a
+                  >Mobile Optimization</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#design"
+                  href="/services#analytics"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >UI/UX Design</a
+                  >GA4 Analytics</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#marketing"
+                  href="/services#conversion"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >Digital Marketing</a
+                  >Conversion Tracking</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services#performance"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Performance Optimization</a
                 >
               </li>
             </ul>
@@ -233,9 +1277,9 @@
               </li>
               <li>
                 <a
-                  href="/portfolio"
+                  href="/templates"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >Our Work</a
+                  >Templates</a
                 >
               </li>
               <li>
@@ -243,13 +1287,6 @@
                   href="/news"
                   class="text-gray-400 hover:text-white transition-colors"
                   >News & Blog</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/careers"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Careers</a
                 >
               </li>
             </ul>
@@ -270,7 +1307,9 @@
             </ul>
           </div>
         </div>
-        <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300">
+        <div
+          class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300"
+        >
           <p>&copy; 2025 CodexColor. All rights reserved.</p>
         </div>
       </div>

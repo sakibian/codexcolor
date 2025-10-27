@@ -1,8 +1,8 @@
-# PRD: Agency Codex Website Implementation
+# PRD: CodexColor Website Implementation
 
 ## Introduction/Overview
 
-This PRD outlines the implementation of a modern, responsive agency website with clean URLs and optimized user experience. The website will serve as the primary online presence for Agency Codex, focusing on lead generation and professional presentation.
+This PRD outlines the implementation of a modern, responsive agency website with clean URLs and optimized user experience. The website will serve as the primary online presence for CodexColor, focusing on lead generation and professional presentation.
 
 ## Goals
 

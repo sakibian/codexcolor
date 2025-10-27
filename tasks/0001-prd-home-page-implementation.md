@@ -2,7 +2,7 @@
 
 ## Introduction/Overview
 
-The home page is the main landing page for Agency Codex, requiring a fully responsive implementation that strictly follows the provided mockup design. The page needs to showcase the agency's services, capabilities, and brand identity while ensuring optimal mobile responsiveness.
+The home page is the main landing page for CodexColor, requiring a fully responsive implementation that strictly follows the provided mockup design. The page needs to showcase the agency's services, capabilities, and brand identity while ensuring optimal mobile responsiveness.
 
 ## Goals
 
@@ -14,7 +14,7 @@ The home page is the main landing page for Agency Codex, requiring a fully respo
 
 ## User Stories
 
-- As a potential client, I want to immediately understand Agency Codex's services and capabilities when landing on the homepage
+- As a potential client, I want to immediately understand CodexColor's services and capabilities when landing on the homepage
 - As a mobile user, I want to have the same high-quality experience as desktop users
 - As a user, I want clear navigation and calls-to-action to explore more about the agency
 - As a visitor, I want to see evidence of the agency's expertise through case studies and success stories

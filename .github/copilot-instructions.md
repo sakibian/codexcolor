@@ -1,8 +1,8 @@
-# Agency Codex - AI Agent Instructions
+# CodexColor - AI Agent Instructions
 
 ## Project Overview
 
-Agency Codex is a modern digital agency website built with HTML, Tailwind CSS, and vanilla JavaScript. The project follows a clean, component-based architecture with a focus on maintainability and performance, using structured development processes for PRDs and task management.
+CodexColor is a modern digital agency website built with HTML, Tailwind CSS, and vanilla JavaScript. The project follows a clean, component-based architecture with a focus on maintainability and performance, using structured development processes for PRDs and task management.
 
 ## Development Process
 

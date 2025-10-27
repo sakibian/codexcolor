@@ -1,26 +1,12 @@
 {
-  "extends": ["stylelint-config-standard"],
+  "extends": "stylelint-config-standard",
   "rules": {
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "variants",
-          "responsive",
-          "screen",
-          "layer"
-        ]
-      }
-    ],
+    "alpha-value-notation": "percentage",
+    "color-function-notation": "modern",
     "selector-class-pattern": null,
-    "no-duplicate-selectors": null,
-    "selector-pseudo-class-no-unknown": [
-      true,
-      {
-        "ignorePseudoClasses": ["global"]
-      }
-    ]
+    "declaration-empty-line-before": null,
+    "length-zero-no-unit": null,
+    "property-no-vendor-prefix": null,
+    "media-feature-range-notation": "prefix"
   }
 }

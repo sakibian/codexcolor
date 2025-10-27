@@ -12,14 +12,35 @@
 /* Scroll Animations */
 .scroll-fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(20px) scale(0.95);
+  animation: fade-in-up-scale 0.3s ease-out forwards paused;
 }
 
 .scroll-fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation-play-state: running;
 }
+
+@keyframes fade-in-up-scale {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+
+@keyframes rotate-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9) rotate(45deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+
 
 /* Lazy Loading Blur-up */
 .lazy-image {
@@ -29,6 +50,213 @@
 
 .lazy-image.loaded {
   filter: blur(0);
+}
+
+/* Hover Effects */
+
+/* Team Member Image Zoom and Overlay */
+.team-member-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(182, 129, 62, 0.9), rgba(182, 129, 62, 0.7));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.team-member-overlay div:first-child {
+  overflow: hidden;
+}
+
+.team-member-overlay div:first-child > div {
+  transition: transform 0.3s ease;
+}
+
+.team-member-overlay:hover div:first-child > div {
+  transform: scale(1.1);
+}
+
+.team-member-overlay:hover::before {
+  opacity: 1;
+}
+
+.team-member-overlay .member-info {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  transition: bottom 0.3s ease;
+  z-index: 2;
+}
+
+.team-member-overlay:hover .member-info {
+  bottom: 10px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Client Success Card Scale and Rotate */
+.client-success-card {
+  transition: all 0.3s ease;
+}
+
+.client-success-card:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Services Detailed Card Scale and Slide Text */
+.services-detail-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.services-detail-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services-detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(182, 129, 62, 0.1), transparent);
+  transition: left 0.3s ease;
+}
+
+.services-detail-card:hover::before {
+  left: 100%;
+}
+
+.services-detail-card .slide-text {
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.services-detail-card:hover .slide-text {
+  transform: translateX(5px);
+}
+
+/* News Article Overlay and Text Slide */
+.news-article-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.news-article-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(182, 129, 62, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.news-article-card:hover::after {
+  opacity: 1;
+}
+
+.news-article-card .article-content {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.news-article-card:hover .article-content {
+  color: white;
+}
+
+.news-article-card .article-title {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.news-article-card:hover .article-title {
+  transform: translateY(-5px);
+}
+
+/* Contact Form Underline Slide and Glow */
+.contact-form input,
+.contact-form textarea {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(182, 129, 62, 0.3);
+}
+
+.contact-form input::after,
+.contact-form textarea::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(to right, #B6813E, #D4AF6A);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.contact-form input:focus::after,
+.contact-form textarea:focus::after {
+  transform: scaleX(1);
+}
+
+/* Navigation Underline Slide */
+.nav-link-underline {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #B6813E, #D4AF6A);
+  transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover::after {
+  width: 100%;
+}
+
+/* Footer Link Lift and Fade */
+.footer-link {
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
 }
 
 /* Performance Optimizations */

@@ -3,22 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News - Agency Codex</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/animations.css" />
-    <script src="../js/navigation.js" defer></script>
-    <script src="../js/analytics.js" defer></script>
-    <script src="../js/lazy-load.js" defer></script>
-    <script src="../js/animations.js" defer></script>
+    <title>
+      News & Blog - CodexColor | Mobile Optimization & Analytics Insights
+    </title>
+    <meta
+      name="description"
+      content="Latest insights on mobile website optimization, GA4 analytics implementation, conversion tracking troubleshooting, and performance optimization for small businesses."
+    />
+    <meta
+      name="keywords"
+      content="mobile optimization blog, GA4 analytics blog, conversion tracking tips, website performance optimization, small business analytics"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="CodexColor" />
+    <meta name="geography" content="Dhaka, Bangladesh" />
+    <meta
+      property="og:title"
+      content="News & Blog - CodexColor | Mobile Optimization & Analytics Insights"
+    />
+    <meta
+      property="og:description"
+      content="Stay updated with the latest mobile optimization, analytics, and performance optimization strategies for small businesses."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://codexcolor.com/news/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "CodexColor Blog",
+        "description": "Mobile optimization and analytics insights for small businesses",
+        "publisher": {
+          "@type": "Organization",
+          "name": "CodexColor"
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <script src="/build/navigation.js" defer></script>
+    <script src="/build/analytics.js" defer></script>
+    <script src="/build/lazy-load.js" defer></script>
+    <script src="/build/animations.js" defer></script>
+    <script src="/build/animations.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".news-link").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            const articleTitle = e.target
+              .closest(".group")
+              .querySelector("h3")
+              .textContent.trim();
+            window.gtag("event", "news_click", {
+              event_category: "News",
+              event_label: articleTitle,
+            });
+          });
+        });
+      });
+    </script>
   </head>
   <body class="font-inter">
     <header class="fixed top-0 left-0 w-full z-50">
-      <!-- Top Contact Bar -->
-      <div class="bg-white shadow-md text-accent-500">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center text-sm">
+      <!-- Top Contact Bar (hidden on small screens, visible on md and up) -->
+      <div class="hidden md:block bg-white shadow-md text-fulvous-500">
+        <div
+          class="container mx-auto px-4 py-2 flex justify-between items-center text-sm"
+        >
           <div class="flex items-center gap-6">
             <span>Corporate Services</span>
             <span>|</span>
@@ -34,7 +91,9 @@
 
       <!-- Main Navigation -->
       <nav class="bg-fulvous-500 shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div
+          class="container mx-auto px-4 py-3 flex justify-between items-center"
+        >
           <div class="text-xl font-bold text-white">CODEXCOLOR</div>
 
           <!-- Desktop Navigation -->
@@ -76,73 +135,383 @@
                 >
               </li>
             </ul>
-            <a href="/contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200">Contact us</a>
-          </div>
-
-        <!-- Hamburger Menu -->
-        <button class="md:hidden p-2 cursor-pointer text-white" id="hamburger">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-
-        <!-- Mobile Menu -->
-        <div
-          class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
-          id="mobile-menu"
-        >
-          <div class="py-2">
-            <a
-              href="/"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Home</a
-            >
-            <a
-              href="/about"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >About Us</a
-            >
-            <a
-              href="/services"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Services</a
-            >
-            <a
-              href="/news"
-              class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
-              >News</a
-            >
-            <a
-              href="/templates"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Templates</a
-            >
             <a
               href="/contact"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Contact Us</a
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200"
+              >Contact us</a
             >
           </div>
-        </div>
+
+          <!-- Hamburger Menu -->
+          <button
+            class="md:hidden p-2 cursor-pointer text-white"
+            id="hamburger"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+            id="mobile-menu"
+          >
+            <div class="py-2">
+              <a
+                href="/"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Home</a
+              >
+              <a
+                href="/about"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >About Us</a
+              >
+              <a
+                href="/services"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Services</a
+              >
+              <a
+                href="/news"
+                class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
+                >News</a
+              >
+              <a
+                href="/templates"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Templates</a
+              >
+              <a
+                href="/contact"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Contact Us</a
+              >
+            </div>
+          </div>
         </div>
       </nav>
     </header>
 
     <main class="pt-16">
       <div class="container mx-auto px-4 py-12 md:py-20">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">News</h1>
-        <!-- Content will be added based on the mockup -->
+        <h1
+          class="text-4xl md:text-6xl font-bold mb-16 leading-tight text-gray-900"
+        >
+          News & Updates
+        </h1>
+
+        <!-- News Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- News Card 1 - Core Web Vitals Tutorial -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-fulvous-100 to-fulvous-200 flex items-center justify-center"
+            >
+              <img
+                src="/images/team-meeting-17.svg"
+                alt="Core Web Vitals Guide"
+                class="w-24 h-24 text-fulvous-600"
+              />
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-fulvous-500 font-medium mb-2">
+                Complete Guide
+              </div>
+              <h3
+                class="text-xl font-bold mb-3 text-gray-900 hover:text-fulvous-600 transition-colors"
+              >
+                Core Web Vitals: Your Complete Guide to Google's Performance
+                Metrics
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                Learn how Google's Core Web Vitals affect SEO rankings. LCP,
+                FID, and CLS explained with practical optimization strategies.
+                Free performance audit checklist included.
+              </p>
+              <a
+                href="#core-web-vitals"
+                class="text-fulvous-500 font-semibold flex items-center gap-2 news-link"
+              >
+                Read Complete Guide
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- News Card 2 - GA4 Migration Guide -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-fulvous-100 to-fulvous-200 flex items-center justify-center"
+            >
+              <img
+                src="/images/coding-28.svg"
+                alt="GA4 Migration Steps"
+                class="w-24 h-24 text-fulvous-600"
+              />
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-fulvous-500 font-medium mb-2">
+                Step-by-Step Guide
+              </div>
+              <h3
+                class="text-xl font-bold mb-3 text-gray-900 group-hover:text-fulvous-600 transition-colors"
+              >
+                Complete GA4 Migration Checklist: Move from Universal Analytics
+                in 10 Days
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                The complete 10-day plan for migrating from Universal Analytics
+                to GA4. Includes data validation, custom reports setup, and
+                testing all conversions. Download free migration checklist.
+              </p>
+              <a
+                href="#ga4-migration"
+                class="text-fulvous-500 font-semibold flex items-center gap-2 news-link"
+              >
+                Get Free Checklist
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+
+          <!-- News Card 3 - Conversion Tracking Manual -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-fulvous-100 to-fulvous-200 flex items-center justify-center"
+            >
+              <img
+                src="/images/scrum-board-80.svg"
+                alt="Conversion Tracking Manual"
+                class="w-24 h-24 text-fulvous-600"
+              />
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-fulvous-500 font-medium mb-2">
+                Developer's Manual
+              </div>
+              <h3
+                class="text-xl font-bold mb-3 text-gray-900 group-hover:text-fulvous-600 transition-colors"
+              >
+                Ultimate Conversion Tracking Setup Guide: Facebook, Google Ads &
+                GA4
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                Step-by-step instructions for properly setting up conversion
+                tracking. Fix common Facebook pixel errors, Google Ads
+                attribution issues, and GA4 goal tracking. Boost your ad ROI by
+                150%.
+              </p>
+              <a
+                href="#conversion-tracking-manual"
+                class="text-fulvous-500 font-semibold flex items-center gap-2 news-link"
+              >
+                Get the Manual
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- News Card 4 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-fulvous-100 to-fulvous-200 flex items-center justify-center"
+            >
+              <img
+                src="/images/coding-28.svg"
+                alt="Web Technologies"
+                class="w-24 h-24 text-fulvous-600"
+              />
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-fulvous-500 font-medium mb-2">
+                Oct 5, 2025
+              </div>
+              <h3
+                class="text-xl font-bold mb-3 text-gray-900 group-hover:text-fulvous-600 transition-colors"
+              >
+                Emerging Web Technologies 2025
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                Explore the cutting-edge web technologies that are
+                revolutionizing how we build and deploy applications across the
+                internet.
+              </p>
+              <a
+                href="#article4"
+                class="text-fulvous-500 font-semibold flex items-center gap-2 news-link"
+              >
+                Read More
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- News Card 5 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-fulvous-100 to-fulvous-200 flex items-center justify-center"
+            >
+              <img
+                src="/images/team-brainstorming-5-40.svg"
+                alt="Team Collaboration"
+                class="w-24 h-24 text-fulvous-600"
+              />
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-fulvous-500 font-medium mb-2">
+                Oct 2, 2025
+              </div>
+              <h3
+                class="text-xl font-bold mb-3 text-gray-900 group-hover:text-fulvous-600 transition-colors"
+              >
+                Building Better Development Teams
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                Learn about effective strategies for building high-performing
+                development teams that excel at delivering exceptional results.
+              </p>
+              <a
+                href="#article5"
+                class="text-fulvous-500 font-semibold flex items-center gap-2 news-link"
+              >
+                Read More
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- News Card 6 -->
+          <div
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-fulvous-100 to-fulvous-200 flex items-center justify-center"
+            >
+              <img
+                src="/images/startup-2-49.svg"
+                alt="Startup Growth"
+                class="w-24 h-24 text-fulvous-600"
+              />
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-fulvous-500 font-medium mb-2">
+                Sep 28, 2025
+              </div>
+              <h3
+                class="text-xl font-bold mb-3 text-gray-900 group-hover:text-fulvous-600 transition-colors"
+              >
+                Scaling Your Startup Successfully
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                A detailed roadmap for startups looking to scale their
+                operations while maintaining product quality and team culture.
+              </p>
+              <a
+                href="#article6"
+                class="text-fulvous-500 font-semibold flex items-center gap-2 news-link"
+              >
+                Read More
+                <svg
+                  class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -152,8 +521,8 @@
           <div class="space-y-6">
             <h3 class="text-2xl font-bold">CodexColor</h3>
             <p class="text-gray-300">
-              Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Mobile optimization and analytics insights helping small
+              businesses stay ahead in digital transformation across Bangladesh.
             </p>
             <div class="flex space-x-3">
               <a
@@ -193,30 +562,30 @@
             <ul class="space-y-4">
               <li>
                 <a
-                  href="/services#web"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Web Development</a
-                >
-              </li>
-              <li>
-                <a
                   href="/services#mobile"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >Mobile Apps</a
+                  >Mobile Optimization</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#design"
+                  href="/services#analytics"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >UI/UX Design</a
+                  >GA4 Analytics</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#marketing"
+                  href="/services#conversion"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >Digital Marketing</a
+                  >Conversion Tracking</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services#performance"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Performance Optimization</a
                 >
               </li>
             </ul>
@@ -233,9 +602,9 @@
               </li>
               <li>
                 <a
-                  href="/portfolio"
+                  href="/templates"
                   class="text-gray-400 hover:text-white transition-colors"
-                  >Our Work</a
+                  >Templates</a
                 >
               </li>
               <li>
@@ -243,13 +612,6 @@
                   href="/news"
                   class="text-gray-400 hover:text-white transition-colors"
                   >News & Blog</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/careers"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Careers</a
                 >
               </li>
             </ul>
@@ -270,7 +632,9 @@
             </ul>
           </div>
         </div>
-        <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300">
+        <div
+          class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300"
+        >
           <p>&copy; 2025 CodexColor. All rights reserved.</p>
         </div>
       </div>

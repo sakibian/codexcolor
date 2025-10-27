@@ -2,11 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Agency Codex</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#e7a547" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=yes" />
+    <title>
+      CodexColor | Mobile Optimization & Analytics Experts for Small Businesses
+    </title>
+    <meta
+      name="description"
+      content="Transform your small business with mobile optimization, GA4 analytics setup, conversion tracking, and performance optimization. Serving Bangladesh & beyond."
+    />
+    <meta
+      name="keywords"
+      content="mobile optimization, small business analytics, GA4 setup, conversion tracking, website performance, Bangladesh"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="CodexColor" />
+    <meta name="geography" content="Dhaka, Bangladesh" />
+    <meta
+      property="og:title"
+      content="CodexColor | Mobile Optimization & Analytics Experts for Small Businesses"
+    />
+    <meta
+      property="og:description"
+      content="Transform your small business with mobile optimization, GA4 analytics setup, conversion tracking, and performance optimization."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://codexcolor.com/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CodexColor",
+        "description": "Mobile optimization and analytics experts for small businesses",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ka-8, Road-12, Baridhara Society",
+          "addressLocality": "Dhaka",
+          "addressCountry": "Bangladesh"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+8801715625999",
+          "contactType": "customer service"
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <script src="js/navigation.js" defer></script>
@@ -16,9 +69,11 @@
   </head>
   <body class="font-inter">
     <header class="fixed top-0 left-0 w-full z-50">
-      <!-- Top Contact Bar -->
-      <div class="bg-white shadow-md text-accent-500">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center text-sm">
+      <!-- Top Contact Bar (hidden on small screens, visible on md and up) -->
+      <div class="hidden md:block bg-white shadow-md text-fulvous-500">
+        <div
+          class="container mx-auto px-4 py-2 flex justify-between items-center text-sm"
+        >
           <div class="flex items-center gap-6">
             <span>Corporate Services</span>
             <span>|</span>
@@ -33,10 +88,10 @@
       </div>
 
       <!-- Main Navigation -->
-      <nav
-        class="bg-fulvous-500 shadow-md"
-      >
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <nav class="bg-fulvous-500 shadow-md">
+        <div
+          class="container mx-auto px-4 py-3 flex justify-between items-center"
+        >
           <div class="text-xl font-bold text-white">CODEXCOLOR</div>
 
           <!-- Desktop Navigation -->
@@ -45,123 +100,144 @@
               <li>
                 <a
                   href="/"
-                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200"
+                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200 nav-link-underline"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="/about"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
                   href="/services"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >Services</a
                 >
               </li>
               <li>
                 <a
                   href="/news"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >News</a
                 >
               </li>
               <li>
                 <a
                   href="/templates"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >Templates</a
                 >
               </li>
             </ul>
-            <a href="/contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200">Contact us</a>
-          </div>
-
-        <!-- Hamburger Menu -->
-        <button class="md:hidden p-2 cursor-pointer text-white" id="hamburger">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-
-        <!-- Mobile Menu -->
-        <div
-          class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
-          id="mobile-menu"
-        >
-          <div class="py-2">
-            <a
-              href="/"
-              class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
-              >Home</a
-            >
-            <a
-              href="/about"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >About Us</a
-            >
-            <a
-              href="/services"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Services</a
-            >
-            <a
-              href="/news"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >News</a
-            >
-            <a
-              href="/templates"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Templates</a
-            >
             <a
               href="/contact"
-              class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
-              >Contact Us</a
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200"
+              >Contact us</a
             >
           </div>
-        </div>
+
+          <!-- Hamburger Menu -->
+          <button
+            class="md:hidden p-2 cursor-pointer text-white"
+            id="hamburger"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+            id="mobile-menu"
+          >
+            <div class="py-2">
+              <a
+                href="/"
+                class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
+                >Home</a
+              >
+              <a
+                href="/about"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >About Us</a
+              >
+              <a
+                href="/services"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Services</a
+              >
+              <a
+                href="/news"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >News</a
+              >
+              <a
+                href="/templates"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Templates</a
+              >
+              <a
+                href="/contact"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Contact Us</a
+              >
+            </div>
+          </div>
         </div>
       </nav>
     </header>
 
     <main class="pt-16">
       <!-- Hero Section -->
-      <section class="min-h-[80vh] bg-white flex items-center px-4 py-12 md:py-20">
-        <div class="container mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <section
+        class="min-h-[80vh] bg-white flex items-center px-4 py-12 md:py-20"
+      >
+        <div
+          class="container mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center"
+        >
           <div class="text-left">
-            <p class="text-lg md:text-xl mb-4 text-fulvous-500 font-medium">Digital Agency</p>
-            <h1
-              class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900"
+            <p
+              class="text-lg md:text-xl mb-4 text-fulvous-500 font-medium leading-tight scroll-fade-in"
             >
-              Work that we produce<br />for our clients
-            </h1>
-            <p class="text-lg md:text-xl mb-10 text-gray-600 max-w-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              More Leads, Guaranteed
             </p>
-            <div class="flex flex-col sm:flex-row gap-6">
+            <h1
+              class="text-3xl md:text-5xl font-medium mb-6 leading-tight text-gray-900 leading-tight scroll-fade-in"
+            >
+              Don't Lose Leads to a Poor Mobile Experience
+            </h1>
+            <p
+              class="text-lg md:text-xl mb-10 text-gray-600 max-w-xl leading-tight scroll-fade-in"
+            >
+              We fix slow, clunky mobile experiences that drive visitors away,
+              turning your traffic into a steady stream of qualified leads.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="/contact"
-                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 shadow-lg hover:shadow-xl transition-all duration-300"
-                >Get more details</a
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 shadow-lg hover:shadow-xl transition-all duration-300 leading-tight scroll-fade-in"
+                >Get Free Mobile Audit</a
+              >
+              <a
+                href="/services"
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg border-2 border-fulvous-500 text-fulvous-500 hover:bg-fulvous-500 hover:text-white transition-all duration-300 leading-tight scroll-fade-in"
+                >View Our Services</a
               >
             </div>
           </div>
@@ -169,191 +245,298 @@
             <img
               src="images/team-brainstorming-5-40.svg"
               alt="Team Brainstorming"
-              class="w-full h-auto"
+              class="w-full h-auto leading-tight scroll-fade-in"
             />
           </div>
         </div>
       </section>
 
-       <!-- Services Overview -->
-       <section class="py-16 md:py-24 bg-white mb-16">
+      <!-- Services Overview -->
+      <section
+        class="py-16 md:py-24 bg-white mb-16 leading-tight scroll-fade-in"
+      >
         <div class="container mx-auto px-4">
           <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Services</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              Our Core Services for Small Businesses
+            </h2>
             <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              We offer comprehensive AI-powered digital solutions organized into four main categories: 
-              Development, AI & Automation, Digital Marketing & Analytics, and Templates, all enhanced with human expertise.
+              We specialize in four critical areas that drive business growth
+              through better mobile performance and data-driven decision making.
             </p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-            <!-- Development Category -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <!-- Mobile Optimization -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 cursor-pointer scroll-fade-in"
+              style="animation-delay: 0s"
+            >
               <div class="text-center mb-6">
                 <div class="mb-4">
                   <img
                     src="images/team-meeting-17.svg"
-                    alt="Development"
+                    alt="Mobile Performance Optimization"
                     class="w-16 h-16 mx-auto"
                   />
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">Development</h3>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">
+                  Mobile Optimization for Small Businesses
+                </h3>
                 <p class="text-gray-600 mb-6">
-                  Full-stack development solutions powered by AI with human expertise
+                  Speed up your mobile site, improve user experience, and boost
+                  conversions with expert mobile-first optimization.
                 </p>
               </div>
               <div class="space-y-4">
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
                   <div>
-                    <h4 class="font-semibold text-gray-900">Web Development</h4>
-                    <p class="text-sm text-gray-600">AI-powered web applications and websites</p>
+                    <h4 class="font-semibold text-gray-900">
+                      Mobile Performance Audit
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Comprehensive analysis of loading times and mobile UX
+                    </p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
                   <div>
-                    <h4 class="font-semibold text-gray-900">Mobile Apps</h4>
-                    <p class="text-sm text-gray-600">iOS and Android apps with intelligent features</p>
+                    <h4 class="font-semibold text-gray-900">
+                      Mobile-First Optimization
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Responsive design, touch-friendly interfaces, fast loading
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900">
+                      Conversion Rate Increase
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Higher engagement and more leads from mobile visitors
+                    </p>
                   </div>
                 </div>
               </div>
               <a
-                href="/services#development"
+                href="/services#mobile"
                 class="inline-block mt-6 text-fulvous-500 hover:text-fulvous-600 font-medium"
               >
                 Learn More →
               </a>
             </div>
 
-            <!-- AI & Automation Category -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-              <div class="text-center mb-6">
-                <div class="mb-4">
-                  <img
-                    src="images/team-presentation-8-46.svg"
-                    alt="AI & Automation"
-                    class="w-16 h-16 mx-auto"
-                  />
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">AI & Automation</h3>
-                <p class="text-gray-600 mb-6">
-                  Intelligent automation and AI solutions for business efficiency
-                </p>
-              </div>
-              <div class="space-y-4">
-                <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 class="font-semibold text-gray-900">AI Agent Bots</h4>
-                    <p class="text-sm text-gray-600">Intelligent chatbots and virtual assistants</p>
-                  </div>
-                </div>
-                <div class="flex items-start space-x-3">
-                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 class="font-semibold text-gray-900">N8N Automation</h4>
-                    <p class="text-sm text-gray-600">Workflow automation and process optimization</p>
-                  </div>
-                </div>
-              </div>
-              <a
-                href="/services#ai-automation"
-                class="inline-block mt-6 text-fulvous-500 hover:text-fulvous-600 font-medium"
-              >
-                Learn More →
-              </a>
-            </div>
-
-            <!-- Digital Marketing & Analytics Category -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <!-- GA4 Analytics Setup -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 cursor-pointer scroll-fade-in"
+              style="animation-delay: 0.1s"
+            >
               <div class="text-center mb-6">
                 <div class="mb-4">
                   <img
                     src="images/problem-solving-5-94.svg"
-                    alt="Digital Marketing & Analytics"
+                    alt="GA4 Analytics Implementation"
                     class="w-16 h-16 mx-auto"
                   />
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">Digital Marketing & Analytics</h3>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">
+                  GA4 Setup & Analytics Implementation
+                </h3>
                 <p class="text-gray-600 mb-6">
-                  Data-driven marketing strategies and comprehensive analytics for business growth
+                  Professional Google Analytics 4 setup with custom dashboards,
+                  goals, and advanced tracking for data-driven decisions.
                 </p>
               </div>
               <div class="space-y-4">
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
                   <div>
-                    <h4 class="font-semibold text-gray-900">Digital Marketing</h4>
-                    <p class="text-sm text-gray-600">AI-powered marketing campaigns and strategies</p>
+                    <h4 class="font-semibold text-gray-900">
+                      GA4 Migration & Setup
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Complete migration from Universal Analytics to GA4
+                    </p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
                   <div>
-                    <h4 class="font-semibold text-gray-900">Analytics & Tracking</h4>
-                    <p class="text-sm text-gray-600">Advanced tracking, pixels, and data insights</p>
+                    <h4 class="font-semibold text-gray-900">
+                      Custom Dashboards & Reports
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Business-focused reporting and automated insights
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900">
+                      E-commerce & Conversion Tracking
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Advanced tracking for sales, leads, and business goals
+                    </p>
                   </div>
                 </div>
               </div>
               <a
-                href="/services#marketing"
+                href="/services#analytics"
                 class="inline-block mt-6 text-fulvous-500 hover:text-fulvous-600 font-medium"
               >
                 Learn More →
               </a>
             </div>
 
-            <!-- Templates Category -->
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <!-- Conversion Tracking Troubleshooting -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 cursor-pointer scroll-fade-in"
+              style="animation-delay: 0.2s"
+            >
               <div class="text-center mb-6">
                 <div class="mb-4">
                   <img
-                    src="images/ui-design-25.svg"
-                    alt="Templates"
+                    src="images/scrum-board-80.svg"
+                    alt="Conversion Tracking Debug"
                     class="w-16 h-16 mx-auto"
                   />
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-900">Templates</h3>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">
+                  Conversion Tracking Troubleshooting
+                </h3>
                 <p class="text-gray-600 mb-6">
-                  Ready-to-use templates and plugins for faster development and deployment
+                  Debug and optimize conversion tracking issues to ensure
+                  accurate data and maximize ROI from your marketing efforts.
                 </p>
               </div>
               <div class="space-y-4">
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
                   <div>
-                    <h4 class="font-semibold text-gray-900">Mobile App Templates</h4>
-                    <p class="text-sm text-gray-600">Android & iOS Vibe Code app templates</p>
+                    <h4 class="font-semibold text-gray-900">
+                      Tracking Code Audit
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Identify broken pixels, missing tags, and setup errors
+                    </p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-3">
                   <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
                   <div>
-                    <h4 class="font-semibold text-gray-900">Web Templates</h4>
-                    <p class="text-sm text-gray-600">Modern web templates and WordPress plugins</p>
+                    <h4 class="font-semibold text-gray-900">
+                      Cross-Platform Tracking
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Facebook, Google Ads, LinkedIn, and other platform
+                      tracking
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900">
+                      Attribution & ROI Analysis
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Understand which channels drive real business results
+                    </p>
                   </div>
                 </div>
               </div>
               <a
-                href="/templates"
+                href="/services#conversion"
                 class="inline-block mt-6 text-fulvous-500 hover:text-fulvous-600 font-medium"
               >
-                Browse Templates →
+                Learn More →
+              </a>
+            </div>
+
+            <!-- Website Performance Optimization -->
+            <div
+              class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 cursor-pointer scroll-fade-in"
+              style="animation-delay: 0.3s"
+            >
+              <div class="text-center mb-6">
+                <div class="mb-4">
+                  <img
+                    src="images/team-brainstorming-5-40.svg"
+                    alt="Website Performance Optimization"
+                    class="w-16 h-16 mx-auto"
+                  />
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">
+                  Website Performance Optimization
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Technical optimization for faster loading, better Core Web
+                  Vitals, and improved user experience across all devices.
+                </p>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900">
+                      Core Web Vitals Optimization
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Improve LCP, FID, CLS scores for better SEO rankings
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900">
+                      Asset Optimization
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Image compression, code minification, caching strategies
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                  <div class="w-2 h-2 bg-fulvous-500 rounded-full mt-2"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900">
+                      CDN & Server Optimization
+                    </h4>
+                    <p class="text-sm text-gray-600">
+                      Content delivery networks and hosting performance tuning
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="/services#performance"
+                class="inline-block mt-6 text-fulvous-500 hover:text-fulvous-600 font-medium"
+              >
+                Learn More →
               </a>
             </div>
           </div>
         </div>
       </section>
 
-
       <!-- Process Section -->
       <section class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
           <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-6">Our AI-Powered Process</h2>
+            <h2 class="text-4xl font-bold mb-6">
+              Our Proven Optimization Process
+            </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge AI technology to deliver faster, smarter, 
-              and more effective digital solutions for your business.
+              Our systematic approach ensures every mobile site, analytics
+              setup, and performance optimization delivers measurable results
+              for your business growth.
             </p>
           </div>
           <div
@@ -363,79 +546,369 @@
               <div class="mb-6">
                 <img
                   src="images/team-presentation-50.svg"
-                  alt="Research"
+                  alt="Audit & Analysis"
                   class="w-16 h-16 mx-auto"
                 />
               </div>
-              <h3 class="text-xl font-semibold mb-4">AI Analysis</h3>
-              <p class="text-gray-600 text-sm">
-                AI-powered market research and competitor analysis to identify 
-                opportunities and optimize your strategy.
+              <h3 class="text-2xl font-semibold mb-4">Audit & Analysis</h3>
+              <p class="text-gray-600 text-xl">
+                Deep site analysis & data audit
               </p>
             </div>
             <div class="text-center p-6">
               <div class="mb-6">
                 <img
                   src="images/team-brainstorming-5-40.svg"
-                  alt="Design"
+                  alt="Strategy & Planning"
                   class="w-16 h-16 mx-auto"
                 />
               </div>
-              <h3 class="text-xl font-semibold mb-4">Smart Design</h3>
-              <p class="text-gray-600 text-sm">
-                AI-enhanced design process that creates user-centric interfaces 
-                and compelling visual experiences, with human refinement for the perfect touch.
-              </p>
+              <h3 class="text-2xl font-semibold mb-4">Strategy & Planning</h3>
+              <p class="text-gray-600 text-xl">Custom strategy & roadmap</p>
             </div>
             <div class="text-center p-6">
               <div class="mb-6">
                 <img
                   src="images/scrum-board-80.svg"
-                  alt="Development"
+                  alt="Implementation"
                   class="w-16 h-16 mx-auto"
                 />
               </div>
-              <h3 class="text-xl font-semibold mb-4">AI Development</h3>
-              <p class="text-gray-600 text-sm">
-                Intelligent code generation and automated development processes 
-                for faster, more reliable solutions, with expert human oversight.
-              </p>
+              <h3 class="text-2xl font-semibold mb-4">Implementation</h3>
+              <p class="text-gray-600 text-xl">Implement & execute solutions</p>
             </div>
             <div class="text-center p-6">
               <div class="mb-6">
                 <img
                   src="images/problem-solving-5-94.svg"
-                  alt="Testing"
+                  alt="Monitor & Optimize"
                   class="w-16 h-16 mx-auto"
                 />
               </div>
-              <h3 class="text-xl font-semibold mb-4">AI Optimization</h3>
-              <p class="text-gray-600 text-sm">
-                Continuous AI monitoring and optimization to ensure peak 
-                performance and user satisfaction.
+              <h3 class="text-2xl font-semibold mb-4">Monitor & Optimize</h3>
+              <p class="text-gray-600 text-xl">
+                Monitor & improve continuously
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Recent Projects Section -->
+      <!-- Recent Projects - Case Studies -->
       <section class="py-24 bg-white">
         <div class="container mx-auto px-4">
           <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-6">Our Recent Projects</h2>
+            <h2 class="text-4xl font-bold mb-6">Before & After Results</h2>
             <p class="text-xl text-gray-600">
-              Lorem ipsum is simply dummy text of the printing and typesetting industry.
+              Real transformation results from our mobile optimization and
+              analytics projects.
             </p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <!-- Project Images Only -->
-            <img src="images/team-work-3-39.png" alt="Project 1" class="w-full h-48 object-cover rounded-lg" />
-            <img src="images/team-presentation-6-16.png" alt="Project 2" class="w-full h-48 object-cover rounded-lg" />
-            <img src="images/diversity-1-5.png" alt="Project 3" class="w-full h-48 object-cover rounded-lg" />
-            <img src="images/team-presentation-50.png" alt="Project 4" class="w-full h-48 object-cover rounded-lg" />
-            <img src="images/ui-design-26.png" alt="Project 5" class="w-full h-48 object-cover rounded-lg" />
-            <img src="images/team-meeting-17.png" alt="Project 6" class="w-full h-48 object-cover rounded-lg" />
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
+          >
+            <!-- Mobile Optimization Success -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 scroll-fade-in"
+              style="animation-delay: 0s"
+            >
+              <div class="relative">
+                <img
+                  src="images/team-work-3-39.png"
+                  alt="Mobile Optimization Project"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-fulvous-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Mobile Optimization
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-900">
+                  Local Restaurant Chain
+                </h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Cart Abandonment</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >-32% reduction</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600"
+                      >Mobile Loading Time</span
+                    >
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >From 8.5s → 2.1s</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Conversion Rate</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >+156% increase</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Bounce Rate</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >-45% reduction</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GA4 Analytics Implementation -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 scroll-fade-in"
+              style="animation-delay: 0.1s"
+            >
+              <div class="relative">
+                <img
+                  src="images/team-presentation-6-16.png"
+                  alt="GA4 Analytics Project"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-fulvous-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  GA4 Analytics
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-900">
+                  E-commerce Store
+                </h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Revenue Tracking</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >Previously missing → Now 100%</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Cart Abandonment</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >-32% reduction</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600"
+                      >Campaign Attribution</span
+                    >
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >Fixed & accurate</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conversion Tracking Fix -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 scroll-fade-in"
+              style="animation-delay: 0.2s"
+            >
+              <div class="relative">
+                <img
+                  src="images/diversity-1-5.png"
+                  alt="Conversion Tracking Project"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-fulvous-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Conversion Tracking
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-900">
+                  Marketing Agency
+                </h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Facebook Pixel</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >Broken → Now working</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Lead Quality</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >+89% higher</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Ad Spend ROI</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >+45% increase</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Performance Optimization -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 scroll-fade-in"
+              style="animation-delay: 0.3s"
+            >
+              <div class="relative">
+                <img
+                  src="images/team-presentation-50.png"
+                  alt="Performance Optimization Project"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-fulvous-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Performance Optimization
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-900">
+                  Law Firm Website
+                </h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Core Web Vitals</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >Poor → Excellent</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Search Rankings</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >+22 positions</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Mobile Score</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >45 → 92</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Multi-Service Project -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 scroll-fade-in"
+              style="animation-delay: 0.4s"
+            >
+              <div class="relative">
+                <img
+                  src="images/ui-design-26.png"
+                  alt="Comprehensive Project"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-fulvous-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Full Optimization
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-900">
+                  Retail Business
+                </h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600"
+                      >Mobile Conversions</span
+                    >
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >+280% boost</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600"
+                      >Analytics Tracking</span
+                    >
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >Complete setup</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Performance Score</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >95/100</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Small Business Success -->
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 scroll-fade-in"
+              style="animation-delay: 0.5s"
+            >
+              <div class="relative">
+                <img
+                  src="images/team-meeting-17.png"
+                  alt="Small Business Project"
+                  class="w-full h-48 object-cover"
+                />
+                <div
+                  class="absolute top-4 left-4 bg-fulvous-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >
+                  Startup Success
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-gray-900">
+                  Tech Startup
+                </h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">User Session Time</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >+3.2 minutes</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Lead Generation</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >+5x increase</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-600">Mobile Experience</span>
+                    <span class="text-sm text-fulvous-600 font-semibold"
+                      >Perfect score</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA After Case Studies -->
+          <div class="text-center mt-16">
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">
+              Ready to Get Results Like These?
+            </h3>
+            <p class="text-lg text-gray-600 mb-8">
+              Join our successful clients who've transformed their business with
+              mobile optimization and analytics.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg text-white bg-fulvous-500 hover:bg-fulvous-600 transition-all duration-300"
+              >
+                Get Your Free Audit
+              </a>
+              <a
+                href="/services"
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg border-2 border-fulvous-500 text-fulvous-500 hover:bg-fulvous-500 hover:text-white transition-all duration-300"
+              >
+                See All Services
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -466,7 +939,7 @@
                 </div>
               </div>
               <p class="text-gray-600">
-                "Agency Codex transformed our digital presence completely. Their
+                "CodexColor transformed our digital presence completely. Their
                 innovative approach and attention to detail exceeded our
                 expectations."
               </p>
@@ -484,7 +957,7 @@
                 </div>
               </div>
               <p class="text-gray-600">
-                "Working with Agency Codex was a game-changer for our business.
+                "Working with CodexColor was a game-changer for our business.
                 Their team's expertise and dedication are unmatched."
               </p>
             </div>
@@ -501,7 +974,7 @@
                 </div>
               </div>
               <p class="text-gray-600">
-                "The results speak for themselves. Agency Codex delivered a
+                "The results speak for themselves. CodexColor delivered a
                 solution that not only met our needs but positioned us for
                 future growth."
               </p>
@@ -511,7 +984,7 @@
       </section>
 
       <!-- Stats Section -->
-      <section class="py-24 bg-primary-600 text-white">
+      <section class="py-24 bg-fulvous-500 text-white">
         <div class="container mx-auto px-4">
           <div
             class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto text-center"
@@ -535,8 +1008,6 @@
           </div>
         </div>
       </section>
-
-    
     </main>
     <footer class="bg-bistre-200 text-white py-20">
       <div class="container mx-auto px-4">
@@ -544,8 +1015,9 @@
           <div class="space-y-6">
             <h3 class="text-2xl font-bold">CodexColor</h3>
             <p class="text-gray-300">
-              Lorem ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Professional mobile website optimization, GA4 analytics
+              implementation, and performance enhancement services for small
+              businesses across Bangladesh.
             </p>
             <div class="flex space-x-3">
               <a
@@ -585,30 +1057,30 @@
             <ul class="space-y-4">
               <li>
                 <a
-                  href="/services#web"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Web Development</a
-                >
-              </li>
-              <li>
-                <a
                   href="/services#mobile"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Mobile Apps</a
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >Mobile Optimization</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#design"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >UI/UX Design</a
+                  href="/services#analytics"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >GA4 Analytics</a
                 >
               </li>
               <li>
                 <a
-                  href="/services#marketing"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Digital Marketing</a
+                  href="/services#conversion"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >Conversion Tracking</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services#performance"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >Performance Optimization</a
                 >
               </li>
             </ul>
@@ -619,29 +1091,22 @@
               <li>
                 <a
                   href="/about"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
-                  href="/portfolio"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Our Work</a
+                  href="/templates"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
+                  >Templates</a
                 >
               </li>
               <li>
                 <a
                   href="/news"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-gray-400 hover:text-white transition-colors footer-link"
                   >News & Blog</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/careers"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Careers</a
                 >
               </li>
             </ul>
@@ -655,14 +1120,16 @@
               <li>
                 <a
                   href="mailto:codexcolorinfo@gmail.com"
-                  class="hover:text-white transition-colors"
+                  class="hover:text-white transition-colors footer-link"
                   >codexcolorinfo@gmail.com</a
                 >
               </li>
             </ul>
           </div>
         </div>
-        <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300">
+        <div
+          class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300"
+        >
           <p>&copy; 2025 CodexColor. All rights reserved.</p>
         </div>
       </div>
