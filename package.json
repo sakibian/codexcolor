@@ -12,7 +12,7 @@
     "build:html": "mkdir -p public && cp *.html public/ && cp css/style.css public/ && cp -r build/ public/ || true",
     "watch": "npm run build:css -- --watch",
     "lint:css": "stylelint '**/*.css' --fix --allow-empty-input"
-  }
+  },
 }
   "keywords": [
     "agency",
