@@ -5,12 +5,15 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:css && npm run build:js",
+    "dev": "echo \"No dev server needed for static site\" && exit 0",
+    "build": "npm run build:css && npm run build:js && npm run build:html",
     "build:css": "tailwindcss -i css/tailwind.css -o css/style.css",
     "build:js": "mkdir -p build && cp js/*.js build/",
+    "build:html": "mkdir -p public && cp *.html public/ && cp css/style.css public/ && cp -r build/ public/ || true",
     "watch": "npm run build:css -- --watch",
     "lint:css": "stylelint '**/*.css' --fix --allow-empty-input"
-  },
+  }
+}
   "keywords": [
     "agency",
     "website",
