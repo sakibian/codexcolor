@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Elements
   const hamburger = document.querySelector('#hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
-  const header = document.querySelector('.navbar');
+  const header = document.querySelector('header');
   let lastScroll = 0;
 
   // Toggle mobile menu

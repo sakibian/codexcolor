@@ -1,0 +1,137 @@
+<!-- Consistent Navigation Bar for All Pages -->
+<nav class="bg-fulvous-500 shadow-md">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="/" class="text-xl font-bold text-white">CODEXCOLOR</a>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center space-x-6">
+      <ul class="flex space-x-6">
+        <li>
+          <a
+            href="/"
+            class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+            data-page="home"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about"
+            class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+            data-page="about"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            href="/services"
+            class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+            data-page="services"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="/roi-calculator"
+            class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+            data-page="roi-calculator"
+            >ROI Calculator</a
+          >
+        </li>
+        <li>
+          <a
+            href="/news"
+            class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+            data-page="news"
+            >News</a
+          >
+        </li>
+        <li>
+          <a
+            href="/templates"
+            class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+            data-page="templates"
+            >Templates</a
+          >
+        </li>
+      </ul>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200"
+        >Contact us</a
+      >
+    </div>
+
+    <!-- Hamburger Menu -->
+    <button
+      class="md:hidden p-2 cursor-pointer text-white"
+      id="hamburger"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div
+      class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden z-50"
+      id="mobile-menu"
+    >
+      <div class="py-2">
+        <a
+          href="/"
+          class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+          data-page="home"
+          >Home</a
+        >
+        <a
+          href="/about"
+          class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+          data-page="about"
+          >About Us</a
+        >
+        <a
+          href="/services"
+          class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+          data-page="services"
+          >Services</a
+        >
+        <a
+          href="/roi-calculator"
+          class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+          data-page="roi-calculator"
+          >ROI Calculator</a
+        >
+        <a
+          href="/news"
+          class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+          data-page="news"
+          >News</a
+        >
+        <a
+          href="/templates"
+          class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+          data-page="templates"
+          >Templates</a
+        >
+        <a
+          href="/contact"
+          class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+          data-page="contact"
+          >Contact Us</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>

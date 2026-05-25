@@ -1,6 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TX59ZQV2");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -28,11 +43,33 @@
     />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://codexcolor.com/services/" />
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/ico/site.webmanifest" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "CodexColor Services",
+        "url": "https://codexcolor.com/services/",
         "description": "Mobile optimization, GA4 analytics, conversion tracking, and performance services for small businesses",
         "provider": {
           "@type": "Organization",
@@ -54,10 +91,15 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/whatsapp-widget.css" />
+    <link rel="stylesheet" href="/css/cookie-consent.css" />
     <script src="/build/navigation.js" defer></script>
     <script src="/build/analytics.js" defer></script>
     <script src="/build/lazy-load.js" defer></script>
     <script src="/build/animations.js" defer></script>
+    <script src="/build/whatsapp-widget.js" defer></script>
+    <script src="/build/cookie-consent.js" defer></script>
+    <script src="/build/pricing-estimates.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".service-link").forEach((link) => {
@@ -75,6 +117,16 @@
     </script>
   </head>
   <body class="font-inter">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TX59ZQV2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="fixed top-0 left-0 w-full z-50">
       <!-- Top Contact Bar (hidden on small screens, visible on md and up) -->
       <div class="hidden md:block bg-white shadow-md text-fulvous-500">
@@ -87,7 +139,9 @@
             <span>Mon - Fri, 10:00am - 08:00pm</span>
           </div>
           <div class="flex items-center gap-6">
-            <span>+88 01715 625 999</span>
+            <span>🇧🇩 +88 01715 625 999</span>
+            <span>|</span>
+            <span>🇨🇦 +1 (647) 572-9552</span>
             <span>|</span>
             <span>codexcolorinfo@gmail.com</span>
           </div>
@@ -99,7 +153,7 @@
         <div
           class="container mx-auto px-4 py-3 flex justify-between items-center"
         >
-          <div class="text-xl font-bold text-white">CODEXCOLOR</div>
+          <a href="/" class="text-xl font-bold text-white">CODEXCOLOR</a>
 
           <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-6">
@@ -123,6 +177,13 @@
                   href="/services"
                   class="text-white font-semibold border-b-2 border-white transition-colors duration-200 nav-link-underline"
                   >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/roi-calculator"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+                  >ROI Calculator</a
                 >
               </li>
               <li>
@@ -170,7 +231,7 @@
 
           <!-- Mobile Menu -->
           <div
-            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden z-50"
             id="mobile-menu"
           >
             <div class="py-2">
@@ -188,6 +249,11 @@
                 href="/services"
                 class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
                 >Services</a
+              >
+              <a
+                href="/roi-calculator"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >ROI Calculator</a
               >
               <a
                 href="/news"
@@ -232,7 +298,7 @@
               class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
             >
               <img
-                src="/images/team-meeting-17.svg"
+                src="assets/images/team-meeting-17.svg"
                 alt="Mobile Performance Optimization"
                 class="w-10 h-10"
               />
@@ -267,7 +333,7 @@
               class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
             >
               <img
-                src="/images/problem-solving-5-94.svg"
+                src="assets/images/problem-solving-5-94.svg"
                 alt="GA4 Analytics"
                 class="w-10 h-10"
               />
@@ -302,7 +368,7 @@
               class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
             >
               <img
-                src="/images/scrum-board-80.svg"
+                src="assets/images/scrum-board-80.svg"
                 alt="Conversion Tracking"
                 class="w-10 h-10"
               />
@@ -337,7 +403,7 @@
               class="w-16 h-16 bg-fulvous-500/10 rounded-xl flex items-center justify-center mb-6"
             >
               <img
-                src="/images/team-brainstorming-5-40.svg"
+                src="assets/images/team-brainstorming-5-40.svg"
                 alt="Performance"
                 class="w-10 h-10"
               />
@@ -801,6 +867,305 @@
           </section>
         </div>
       </div>
+      <!-- Pricing Section -->
+      <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">Transparent Pricing</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+              Clear, honest pricing for small businesses in Bangladesh & Canada
+            </p>
+            <p class="text-sm text-gray-500">
+              🇧🇩 Prices shown in USD, BDT, and CAD | 💳 Flexible payment options available
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <!-- Mobile Audit -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100 hover:border-fulvous-500 transition-all duration-300">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold mb-2 text-gray-900">Mobile Audit</h3>
+                <p class="text-gray-600 mb-4">Comprehensive analysis</p>
+                <div class="text-4xl font-bold text-fulvous-600 mb-2">$299</div>
+                <div class="text-sm text-gray-500 space-y-1">
+                  <div>≈ ৳35,000 BDT</div>
+                  <div>≈ $415 CAD</div>
+                </div>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Detailed performance report</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Mobile UX audit</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Optimization roadmap</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">2-3 business days</span>
+                </li>
+              </ul>
+              <a href="/contact?service=mobile_audit" class="block w-full text-center px-6 py-3 bg-fulvous-500 hover:bg-fulvous-600 text-white font-semibold rounded-lg transition-colors">
+                Get Started
+              </a>
+            </div>
+
+            <!-- GA4 Setup -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-fulvous-500 hover:border-fulvous-600 transition-all duration-300 relative">
+              <div class="absolute top-0 right-0 bg-fulvous-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                Popular
+              </div>
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold mb-2 text-gray-900">GA4 Setup</h3>
+                <p class="text-gray-600 mb-4">Complete analytics</p>
+                <div class="text-4xl font-bold text-fulvous-600 mb-2">$499-799</div>
+                <div class="text-sm text-gray-500 space-y-1">
+                  <div>≈ ৳58,000-93,000 BDT</div>
+                  <div>≈ $690-1,110 CAD</div>
+                </div>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Full GA4 implementation</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Custom events & conversions</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">E-commerce tracking</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Custom dashboards</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">5-7 business days</span>
+                </li>
+              </ul>
+              <a href="/contact?service=ga4_setup" class="block w-full text-center px-6 py-3 bg-fulvous-500 hover:bg-fulvous-600 text-white font-semibold rounded-lg transition-colors">
+                Get Started
+              </a>
+            </div>
+
+            <!-- Conversion Tracking -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100 hover:border-fulvous-500 transition-all duration-300">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold mb-2 text-gray-900">Conversion Fix</h3>
+                <p class="text-gray-600 mb-4">Debug & repair</p>
+                <div class="text-4xl font-bold text-fulvous-600 mb-2">$399-599</div>
+                <div class="text-sm text-gray-500 space-y-1">
+                  <div>≈ ৳47,000-70,000 BDT</div>
+                  <div>≈ $555-830 CAD</div>
+                </div>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Tracking audit</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Fix broken pixels/tags</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Cross-platform setup</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">2-4 business days</span>
+                </li>
+              </ul>
+              <a href="/contact?service=conversion_tracking" class="block w-full text-center px-6 py-3 bg-fulvous-500 hover:bg-fulvous-600 text-white font-semibold rounded-lg transition-colors">
+                Get Started
+              </a>
+            </div>
+
+            <!-- Performance Optimization -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100 hover:border-fulvous-500 transition-all duration-300">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold mb-2 text-gray-900">Performance</h3>
+                <p class="text-gray-600 mb-4">Core Web Vitals</p>
+                <div class="text-4xl font-bold text-fulvous-600 mb-2">$799-1,499</div>
+                <div class="text-sm text-gray-500 space-y-1">
+                  <div>≈ ৳93,000-175,000 BDT</div>
+                  <div>≈ $1,110-2,080 CAD</div>
+                </div>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Performance audit</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Image & code optimization</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">CDN & caching setup</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">5-10 business days</span>
+                </li>
+              </ul>
+              <a href="/contact?service=performance" class="block w-full text-center px-6 py-3 bg-fulvous-500 hover:bg-fulvous-600 text-white font-semibold rounded-lg transition-colors">
+                Get Started
+              </a>
+            </div>
+
+            <!-- Monthly Retainer -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100 hover:border-fulvous-500 transition-all duration-300">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold mb-2 text-gray-900">Monthly Retainer</h3>
+                <p class="text-gray-600 mb-4">Ongoing support</p>
+                <div class="text-4xl font-bold text-fulvous-600 mb-2">$499-999</div>
+                <div class="text-sm text-gray-500 space-y-1">
+                  <div>≈ ৳58,000-117,000 BDT</div>
+                  <div>≈ $690-1,390 CAD</div>
+                  <div class="text-xs">/month</div>
+                </div>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Monthly performance reviews</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Analytics monitoring</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Continuous optimization</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">Priority support</span>
+                </li>
+              </ul>
+              <a href="/contact?service=retainer" class="block w-full text-center px-6 py-3 bg-fulvous-500 hover:bg-fulvous-600 text-white font-semibold rounded-lg transition-colors">
+                Get Started
+              </a>
+            </div>
+
+            <!-- Custom Package -->
+            <div class="bg-gradient-to-br from-fulvous-500 to-fulvous-600 rounded-2xl shadow-lg p-8 text-white">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold mb-2">Custom Package</h3>
+                <p class="text-white/90 mb-4">Tailored to your needs</p>
+                <div class="text-4xl font-bold mb-2">Let's Talk</div>
+                <div class="text-sm text-white/80">
+                  Custom pricing based on scope
+                </div>
+              </div>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Mix & match services</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Volume discounts</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Flexible payment plans</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-white mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Dedicated account manager</span>
+                </li>
+              </ul>
+              <a href="/contact?service=custom" class="block w-full text-center px-6 py-3 bg-white hover:bg-gray-100 text-fulvous-600 font-semibold rounded-lg transition-colors">
+                Contact Us
+              </a>
+            </div>
+          </div>
+
+          <!-- Payment Options -->
+          <div class="mt-16 text-center">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900">Flexible Payment Options</h3>
+            <div class="flex flex-wrap justify-center gap-6 items-center">
+              <div class="bg-white px-6 py-3 rounded-lg shadow-md">
+                <p class="text-sm font-semibold text-gray-700">🇧🇩 Bangladesh</p>
+                <p class="text-xs text-gray-600">bKash | Nagad | Bank Transfer</p>
+              </div>
+              <div class="bg-white px-6 py-3 rounded-lg shadow-md">
+                <p class="text-sm font-semibold text-gray-700">🇨🇦 Canada</p>
+                <p class="text-xs text-gray-600">Credit Card | PayPal | E-Transfer</p>
+              </div>
+              <div class="bg-white px-6 py-3 rounded-lg shadow-md">
+                <p class="text-sm font-semibold text-gray-700">💳 International</p>
+                <p class="text-xs text-gray-600">Stripe | Wire Transfer</p>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-6">
+              💰 50% upfront, 50% on completion | 🔒 Secure payment processing | 📄 Invoice provided
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-bistre-200 text-white py-20">
@@ -810,7 +1175,11 @@
             <h3 class="text-2xl font-bold">CodexColor</h3>
             <p class="text-gray-300">
               Professional mobile optimization, GA4 analytics setup, conversion
-              tracking, and performance enhancement services across Bangladesh.
+              tracking, and performance enhancement services for small businesses
+              in Bangladesh (Dhaka) and Canada (Scarborough, ON).
+            </p>
+            <p class="text-sm text-gray-400 mt-4">
+              Business Partner: <a href="https://sakibian.com" target="_blank" rel="noopener" class="text-fulvous-400 hover:text-fulvous-300 transition-colors">sakibian.com</a>
             </p>
             <div class="flex space-x-3">
               <a
@@ -914,9 +1283,12 @@
           <div>
             <h4 class="text-lg font-semibold mb-6">Contact</h4>
             <ul class="space-y-4 text-gray-400">
-              <li>Ka-8, Road-12, Baridhara Society</li>
-              <li>Dhaka, Bangladesh</li>
+              <li><strong class="text-white">Bangladesh:</strong></li>
+              <li>Ka-8, Road-12, Baridhara Society, Dhaka</li>
               <li>+88 01715 625 999</li>
+              <li><strong class="text-white">Canada:</strong></li>
+              <li>Scarborough, ON</li>
+              <li>+1 (647) 572-9552</li>
               <li>
                 <a
                   href="mailto:codexcolorinfo@gmail.com"

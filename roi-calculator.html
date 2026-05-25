@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROI Calculator - CodexColor | Calculate Your Revenue Potential</title>
+    <meta
+      name="description"
+      content="Calculate your potential revenue increase with mobile optimization and analytics. Free ROI calculator for small businesses."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="ROI Calculator - CodexColor | Calculate Your Revenue Potential" />
+    <meta property="og:description" content="Estimate the business impact of mobile optimization and analytics improvements with CodexColor's free ROI calculator." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://codexcolor.com/roi-calculator" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CodexColor ROI Calculator",
+        "url": "https://codexcolor.com/roi-calculator",
+        "applicationCategory": "BusinessApplication",
+        "description": "Calculate the revenue potential of mobile optimization and analytics improvements for your business."
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/whatsapp-widget.css" />
+    <link rel="stylesheet" href="/css/roi-calculator.css" />
+    <link rel="stylesheet" href="/css/cookie-consent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("Qv3j0BIm2radg9DNP");
+    </script>
+  </head>
+  <body class="font-inter">
+    <header class="fixed top-0 left-0 w-full z-50">
+      <div class="hidden md:block bg-white shadow-md text-fulvous-500">
+        <div
+          class="container mx-auto px-4 py-2 flex justify-between items-center text-sm"
+        >
+          <div class="flex items-center gap-6">
+            <span>Corporate Services</span>
+            <span>|</span>
+            <span>Mon - Fri, 10:00am - 08:00pm</span>
+          </div>
+          <div class="flex items-center gap-6">
+            <span>🇧🇩 +88 01715 625 999</span>
+            <span>|</span>
+            <span>🇨🇦 +1 (647) 572-9552</span>
+            <span>|</span>
+            <span>codexcolorinfo@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="bg-fulvous-500 shadow-md">
+        <div
+          class="container mx-auto px-4 py-3 flex justify-between items-center"
+        >
+          <a href="/" class="text-xl font-bold text-white">CODEXCOLOR</a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-6">
+            <ul class="flex space-x-6">
+              <li>
+                <a
+                  href="/"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/roi-calculator"
+                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200 nav-link-underline"
+                  >ROI Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/news"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/templates"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+                  >Templates</a
+                >
+              </li>
+            </ul>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-fulvous-500 bg-white hover:text-fulvous-600 transition-colors duration-200"
+              >Contact us</a
+            >
+          </div>
+
+          <!-- Hamburger Menu -->
+          <button
+            class="md:hidden p-2 cursor-pointer text-white"
+            id="hamburger"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden z-50"
+            id="mobile-menu"
+          >
+            <div class="py-2">
+              <a
+                href="/"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Home</a
+              >
+              <a
+                href="/about"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >About Us</a
+              >
+              <a
+                href="/services"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Services</a
+              >
+              <a
+                href="/roi-calculator"
+                class="block py-3 px-6 text-white font-semibold bg-white/10 transition-all duration-200"
+                >ROI Calculator</a
+              >
+              <a
+                href="/news"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >News</a
+              >
+              <a
+                href="/templates"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Templates</a
+              >
+              <a
+                href="/contact"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-32 pb-20">
+      <!-- Hero Section -->
+      <section class="bg-gradient-to-br from-fulvous-50 to-white py-12">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              Calculate Your Revenue Potential
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">
+              See how much revenue you could gain with mobile optimization and analytics.
+              Free, instant calculation with detailed insights.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">No credit card required</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Instant results</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-gray-700">Based on real data</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calculator Section -->
+      <section class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            <div id="roi-calculator" class="p-8 md:p-12">
+              <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">
+                Enter Your Current Metrics
+              </h2>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="calculator-input-group">
+                  <label for="monthly-traffic" class="calculator-label">
+                    Monthly Website Traffic
+                  </label>
+                  <div class="relative">
+                    <span class="calculator-input-icon">👥</span>
+                    <input
+                      type="text"
+                      id="monthly-traffic"
+                      class="calculator-input"
+                      placeholder="e.g., 5000"
+                      inputmode="numeric"
+                    />
+                  </div>
+                  <span class="calculator-help-text">
+                    Total visitors per month
+                  </span>
+                </div>
+
+                <div class="calculator-input-group">
+                  <label for="conversion-rate" class="calculator-label">
+                    Current Conversion Rate (%)
+                  </label>
+                  <div class="relative">
+                    <span class="calculator-input-icon">📊</span>
+                    <input
+                      type="text"
+                      id="conversion-rate"
+                      class="calculator-input"
+                      placeholder="e.g., 2.5"
+                      inputmode="decimal"
+                    />
+                  </div>
+                  <span class="calculator-help-text">
+                    Percentage of visitors who convert
+                  </span>
+                </div>
+
+                <div class="calculator-input-group md:col-span-2">
+                  <label for="avg-order-value" class="calculator-label">
+                    Average Order Value ($)
+                  </label>
+                  <div class="relative">
+                    <span class="calculator-input-icon">💰</span>
+                    <input
+                      type="text"
+                      id="avg-order-value"
+                      class="calculator-input"
+                      placeholder="e.g., 150"
+                      inputmode="numeric"
+                    />
+                  </div>
+                  <span class="calculator-help-text">
+                    Average revenue per conversion
+                  </span>
+                </div>
+              </div>
+
+              <button id="calculate-roi" class="mb-8">
+                Calculate My ROI
+              </button>
+
+              <div class="text-center text-sm text-gray-500">
+                <p>💡 Industry average conversion rate improvement: 80-150%</p>
+              </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="roi-results" class="hidden mt-12">
+              <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">
+                Your Revenue Potential
+              </h2>
+
+              <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="result-card">
+                  <div class="result-label">Current Monthly Revenue</div>
+                  <div id="current-revenue" class="result-value">$0</div>
+                </div>
+
+                <div class="result-card">
+                  <div class="result-label">Optimized Monthly Revenue</div>
+                  <div id="optimized-revenue" class="result-value positive">$0</div>
+                </div>
+
+                <div class="result-card">
+                  <div class="result-label">Monthly Revenue Increase</div>
+                  <div id="revenue-increase" class="result-value highlight">$0</div>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="result-card">
+                  <div class="result-label">Payback Period</div>
+                  <div id="payback-period" class="result-value">0</div>
+                  <div class="text-sm text-gray-600 mt-2">months</div>
+                </div>
+
+                <div class="result-card">
+                  <div class="result-label">Annual ROI</div>
+                  <div id="roi-percentage" class="result-value positive">0</div>
+                  <div class="text-sm text-gray-600 mt-2">%</div>
+                </div>
+              </div>
+
+              <!-- Visual Comparison -->
+              <div class="bg-white rounded-2xl p-8 shadow-lg mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center text-gray-900">
+                  Revenue Comparison
+                </h3>
+                <div class="comparison-bars">
+                  <div class="comparison-bar">
+                    <div class="bar-container">
+                      <div class="bar current" style="height: 40%">
+                        <span class="bar-label">Current</span>
+                      </div>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700">Before Optimization</p>
+                  </div>
+                  <div class="comparison-bar">
+                    <div class="bar-container">
+                      <div class="bar" style="height: 80%">
+                        <span class="bar-label">Optimized</span>
+                      </div>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700">After Optimization</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lead Capture Form -->
+            <div id="roi-lead-capture" class="hidden mt-12">
+              <h3 class="text-2xl font-bold mb-4 text-center">
+                Get Your Detailed ROI Report
+              </h3>
+              <p class="text-center mb-6 text-white/90">
+                Enter your email to receive a comprehensive PDF report with actionable insights
+                and next steps to achieve these results.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <div>
+                  <label for="roi-name" class="block text-sm font-semibold mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="roi-name"
+                    class="lead-capture-input"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="roi-email" class="block text-sm font-semibold mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="roi-email"
+                    class="lead-capture-input"
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button id="submit-roi-lead">
+                Get Detailed Report (Free)
+              </button>
+
+              <p class="text-center text-sm mt-4 text-white/80">
+                🔒 We respect your privacy. No spam, ever.
+              </p>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="mt-16 bg-gradient-to-br from-fulvous-500 to-fulvous-600 rounded-2xl p-8 md:p-12 text-white text-center">
+              <h3 class="text-3xl font-bold mb-4">
+                Ready to Achieve These Results?
+              </h3>
+              <p class="text-xl mb-8 text-white/90">
+                Schedule a free consultation to discuss how we can help you reach your revenue goals.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact?source=roi_calculator"
+                  class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-white text-fulvous-600 hover:bg-gray-100 transition-colors"
+                >
+                  Schedule Free Consultation
+                </a>
+                <a
+                  href="/services"
+                  class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg border-2 border-white text-white hover:bg-white hover:text-fulvous-600 transition-colors"
+                >
+                  View Our Services
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-bistre-200 text-white py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold">CodexColor</h3>
+            <p class="text-gray-300">
+              Professional mobile website optimization, GA4 analytics
+              implementation, and performance enhancement services for small
+              businesses in Bangladesh (Dhaka) and Canada (Scarborough, ON).
+            </p>
+            <p class="text-sm text-gray-400">
+              Business Partner: <a href="https://sakibian.com" target="_blank" rel="noopener" class="text-fulvous-400 hover:text-fulvous-300 transition-colors">sakibian.com</a>
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-4">
+              <li>
+                <a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="/services" class="text-gray-400 hover:text-white transition-colors">Services</a>
+              </li>
+              <li>
+                <a href="/roi-calculator" class="text-gray-400 hover:text-white transition-colors">ROI Calculator</a>
+              </li>
+              <li>
+                <a href="/contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Services</h4>
+            <ul class="space-y-4">
+              <li>
+                <a href="/services#mobile" class="text-gray-400 hover:text-white transition-colors">Mobile Optimization</a>
+              </li>
+              <li>
+                <a href="/services#analytics" class="text-gray-400 hover:text-white transition-colors">GA4 Analytics</a>
+              </li>
+              <li>
+                <a href="/services#conversion" class="text-gray-400 hover:text-white transition-colors">Conversion Tracking</a>
+              </li>
+              <li>
+                <a href="/services#performance" class="text-gray-400 hover:text-white transition-colors">Performance Optimization</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Contact</h4>
+            <ul class="space-y-4 text-gray-400">
+              <li><strong class="text-white">Bangladesh:</strong></li>
+              <li>Ka-8, Road-12, Baridhara Society, Dhaka</li>
+              <li>+88 01715 625 999</li>
+              <li><strong class="text-white">Canada:</strong></li>
+              <li>Scarborough, ON</li>
+              <li>+1 (647) 572-9552</li>
+              <li>
+                <a
+                  href="mailto:codexcolorinfo@gmail.com"
+                  class="hover:text-white transition-colors"
+                  >codexcolorinfo@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300"
+        >
+          <p>&copy; 2025 CodexColor. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/build/navigation.js" defer></script>
+    <script src="/build/analytics.js" defer></script>
+    <script src="/build/whatsapp-widget.js" defer></script>
+    <script src="/build/roi-calculator.js" defer></script>
+    <script src="/build/cookie-consent.js" defer></script>
+  </body>
+</html>

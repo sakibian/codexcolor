@@ -15,7 +15,7 @@ export default [
     },
     rules: {
       "no-unused-vars": "warn",
-      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "no-console": ["warn", { allow: ["warn", "error", "log"] }],
       quotes: ["error", "single"],
       semi: ["error", "always"],
       indent: ["error", 2],

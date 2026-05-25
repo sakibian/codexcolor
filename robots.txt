@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Disallow build and development files
+Disallow: /build/
+Disallow: /node_modules/
+Disallow: /mockup/
+Disallow: /tasks/
+Disallow: /rules/
+Disallow: /*.md$
+Disallow: /*.txt$
+
+# Allow important pages
+Allow: /index.html
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /roi-calculator.html
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://codexcolor.com/sitemap.xml

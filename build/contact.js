@@ -332,8 +332,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       console.log('Form data:', data);
 
-      // Simulate API call (replace with actual endpoint)
-      const response = await simulateFormSubmission(data);
+      // Send email via EmailJS
+      const response = await sendEmail(data);
 
       if (response.success) {
         // Calculate lead quality and show service-specific success
@@ -373,20 +373,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Simulate form submission (replace with actual API endpoint)
-  async function simulateFormSubmission(data) {
-    // Simulate network delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    // Simulate random success/failure (for demo purposes)
-    const success = Math.random() > 0.1; // 90% success rate
-
-    if (success) {
-      // In a real implementation, you would send the data to your server
-      console.log('Form would be submitted to server:', data);
-      return { success: true, message: 'Message sent successfully' };
-    } else {
-      throw new Error('Server error');
+  // Send email using EmailJS
+  async function sendEmail(data) {
+    try {
+      const result = await emailjs.send('service_eoloeii', 'template_md0takd', {
+        name: `${data.firstName} ${data.lastName}`,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phone: data.phone || '',
+        company: data.company || '',
+        service: data.service || '',
+        budget: data.budget || '',
+        message: data.message,
+        service_challenges: data.service_challenges || '',
+        time: new Date().toLocaleString()
+      });
+      return { success: true, result };
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      return { success: false, error };
     }
   }
 

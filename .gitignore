@@ -1,0 +1,11 @@
+.aider*
+.DS_Store
+node_modules/
+.claude/
+.playwright-mcp/
+.qodo/
+*.log
+*.tmp
+*.swp
+*.swo
+*.code-workspace

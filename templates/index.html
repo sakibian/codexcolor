@@ -1,6 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TX59ZQV2");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -70,6 +85,26 @@
       content="Code templates for developers by CodexColor"
     />
 
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/ico/site.webmanifest" />
+
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
       {
@@ -80,13 +115,13 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://codexcolor.com"
+            "item": "https://codexcolor.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Templates",
-            "item": "https://codexcolor.com/templates"
+            "item": "https://codexcolor.com/templates/"
           }
         ]
       }
@@ -107,9 +142,10 @@
           "logo": "https://codexcolor.com/images/logo.png",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+8801715625999",
+            "telephone": "+16475729552",
             "contactType": "customer service",
-            "availableLanguage": "en"
+            "areaServed": ["BD", "CA"],
+            "availableLanguage": ["en"]
           }
         },
         "mainEntity": {
@@ -158,14 +194,26 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/animations.css" />
-    <script src="../js/navigation.js" defer></script>
-    <script src="../js/analytics.js" defer></script>
-    <script src="../js/lazy-load.js" defer></script>
-    <script src="../js/animations.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/cookie-consent.css" />
+    <script src="/js/navigation.js" defer></script>
+    <script src="/js/analytics.js" defer></script>
+    <script src="/js/lazy-load.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+    <script src="/build/cookie-consent.js" defer></script>
   </head>
   <body class="font-inter">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TX59ZQV2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="fixed top-0 left-0 w-full z-50">
       <!-- Top Contact Bar (hidden on small screens, visible on md and up) -->
       <div class="hidden md:block bg-white shadow-md text-fulvous-500">
@@ -178,7 +226,9 @@
             <span>Mon - Fri, 10:00am - 08:00pm</span>
           </div>
           <div class="flex items-center gap-6">
-            <span>+88 01715 625 999</span>
+            <span>🇧🇩 +88 01715 625 999</span>
+            <span>|</span>
+            <span>🇨🇦 +1 (647) 572-9552</span>
             <span>|</span>
             <span>codexcolorinfo@gmail.com</span>
           </div>
@@ -190,7 +240,7 @@
         <div
           class="container mx-auto px-4 py-3 flex justify-between items-center"
         >
-          <div class="text-xl font-bold text-white">CODEXCOLOR</div>
+           <a href="/" class="text-xl font-bold text-white">CODEXCOLOR</a>
 
           <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-6">
@@ -198,35 +248,42 @@
               <li>
                 <a
                   href="/"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="/about"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
                   href="/services"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >Services</a
                 >
               </li>
               <li>
                 <a
+                  href="/roi-calculator"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
+                  >ROI Calculator</a
+                >
+              </li>
+              <li>
+                <a
                   href="/news"
-                  class="text-white/90 hover:text-white transition-colors duration-200"
+                  class="text-white/90 hover:text-white transition-colors duration-200 nav-link-underline"
                   >News</a
                 >
               </li>
               <li>
                 <a
                   href="/templates"
-                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200"
+                  class="text-white font-semibold border-b-2 border-white transition-colors duration-200 nav-link-underline"
                   >Templates</a
                 >
               </li>
@@ -261,7 +318,7 @@
 
           <!-- Mobile Menu -->
           <div
-            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+            class="mobile-menu hidden fixed top-16 left-0 w-full bg-fulvous-500 shadow-md transform translate-y-[-10px] opacity-0 transition-all duration-300 ease-in-out md:hidden z-50"
             id="mobile-menu"
           >
             <div class="py-2">
@@ -279,6 +336,11 @@
                 href="/services"
                 class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
                 >Services</a
+              >
+              <a
+                href="/roi-calculator"
+                class="block py-3 px-6 text-white/90 hover:bg-gray-50 hover:text-fulvous-500 transition-all duration-200"
+                >ROI Calculator</a
               >
               <a
                 href="/news"
@@ -372,9 +434,7 @@
     </main>
 
     <!-- Category Navigation -->
-    <section
-      class="absolute top-50 right-0 bg-gray-50 border-b border-gray-100 py-4"
-    >
+    <section class="top-16 right-0 bg-gray-50 border-b border-gray-100 py-4">
       <div class="container mx-auto px-4">
         <div class="flex justify-start">
           <div class="inline-flex round-lg">
@@ -383,22 +443,48 @@
               class="flex items-center gap-2 px-6 py-3 text-lg font-semibold rounded-l-md text-fulvous-600 bg-white shadow border-r border-gray-200 active"
               onclick="showWebTemplates()"
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
               </svg>
               Web Templates
-              <span class="ml-2 text-sm bg-fulvous-500 text-white px-2 py-1 rounded-2xl">4</span>
+              <span
+                class="ml-2 text-sm bg-fulvous-500 text-white px-2 py-1 rounded-2xl"
+                >4</span
+              >
             </button>
             <button
               id="mobile-tab"
               class="flex items-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg text-gray-600 hover:text-fulvous-600"
               onclick="showMobileTemplates()"
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                ></path>
               </svg>
               Mobile Templates
-              <span class="ml-2 text-sm bg-fulvous-500 text-white px-2 py-1 rounded-2xl">4</span>
+              <span
+                class="ml-2 text-sm bg-fulvous-500 text-white px-2 py-1 rounded-2xl"
+                >4</span
+              >
             </button>
           </div>
         </div>
@@ -991,12 +1077,20 @@
         document.getElementById("mobile-templates").classList.add("hidden");
 
         // Web tab active styling
-        document.getElementById("web-tab").classList.remove("text-gray-600", "hover:text-fulvous-600");
-        document.getElementById("web-tab").classList.add("text-fulvous-600", "bg-white", "shadow");
+        document
+          .getElementById("web-tab")
+          .classList.remove("text-gray-600", "hover:text-fulvous-600");
+        document
+          .getElementById("web-tab")
+          .classList.add("text-fulvous-600", "bg-white", "shadow");
 
         // Mobile tab inactive styling
-        document.getElementById("mobile-tab").classList.remove("text-fulvous-600", "bg-white", "shadow");
-        document.getElementById("mobile-tab").classList.add("text-gray-600", "hover:text-fulvous-600");
+        document
+          .getElementById("mobile-tab")
+          .classList.remove("text-fulvous-600", "bg-white", "shadow");
+        document
+          .getElementById("mobile-tab")
+          .classList.add("text-gray-600", "hover:text-fulvous-600");
       }
 
       function showMobileTemplates() {
@@ -1004,12 +1098,20 @@
         document.getElementById("mobile-templates").classList.remove("hidden");
 
         // Mobile tab active styling
-        document.getElementById("mobile-tab").classList.remove("text-gray-600", "hover:text-fulvous-600");
-        document.getElementById("mobile-tab").classList.add("text-fulvous-600", "bg-white", "shadow");
+        document
+          .getElementById("mobile-tab")
+          .classList.remove("text-gray-600", "hover:text-fulvous-600");
+        document
+          .getElementById("mobile-tab")
+          .classList.add("text-fulvous-600", "bg-white", "shadow");
 
         // Web tab inactive styling
-        document.getElementById("web-tab").classList.remove("text-fulvous-600", "bg-white", "shadow");
-        document.getElementById("web-tab").classList.add("text-gray-600", "hover:text-fulvous-600");
+        document
+          .getElementById("web-tab")
+          .classList.remove("text-fulvous-600", "bg-white", "shadow");
+        document
+          .getElementById("web-tab")
+          .classList.add("text-gray-600", "hover:text-fulvous-600");
       }
     </script>
 
@@ -1120,7 +1222,8 @@
             <ul class="space-y-4 text-gray-400">
               <li>Ka-8, Road-12, Baridhara Society</li>
               <li>Dhaka, Bangladesh</li>
-              <li>+88 01715 625 999</li>
+              <li>🇧🇩 +88 01715 625 999</li>
+              <li>🇨🇦 +1 (647) 572-9552</li>
               <li>
                 <a
                   href="mailto:codexcolorinfo@gmail.com"
@@ -1134,12 +1237,6 @@
         <div
           class="border-t border-white/10 mt-12 pt-8 text-center text-gray-300"
         >
-          <p>&copy; 2025 CodexColor. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
           <p>&copy; 2025 CodexColor. All rights reserved.</p>
         </div>
       </div>
