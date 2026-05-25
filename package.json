@@ -4,14 +4,9 @@
   "description": "Codexcolor Digital Agency Website",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
+    "start": "node server.js",
     "dev": "echo \"No dev server needed for static site\" && exit 0",
     "build": "npm run build:css && npm run build:js && npm run build:html",
-=======
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "npm run build:css && npm run build:js",
->>>>>>> 9c571b0 (Add untracked files and modified - after renew)
     "build:css": "tailwindcss -i css/tailwind.css -o css/style.css",
     "build:js": "mkdir -p build && cp js/*.js build/",
     "build:html": "mkdir -p public/css public/js && cp *.html public/ && cp css/style.css public/css/ && cp -r build/* public/js/",
